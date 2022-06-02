@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textColored.changeColor(button: signUp!, quote: "Не маєте облікового запису? Зареєструватися", colorText1: UIColor(named: "AppBlack")!, colorText2: UIColor(named: "AppDarkGreen")!, text1: "Не маєте облікового запису?", text2: " Зареєструватися", font: .init(name: "HelveticaNeue", size: 11.0)!)
-       
+        
 
     }
     
@@ -56,18 +56,18 @@ class LoginViewController: UIViewController {
                 let json = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as? NSDictionary
                 if let parseJSON = json {
                     let accessToken = parseJSON["token"] as? String
-                
                     print("accessToken: \(String(describing: accessToken))")
                     if accessToken == nil {
                         print("AccessToken is not true")
                         return
                     }
+                    let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "accessToken")
                     DispatchQueue.main.async {
                         self.pushMain()
                     }
                 }
                 
-    
+                
             case .failure(let error):
                 print(error)
                 
