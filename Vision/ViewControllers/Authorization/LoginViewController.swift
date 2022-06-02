@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         textColored.changeColor(button: signUp!, quote: "Не маєте облікового запису? Зареєструватися", colorText1: UIColor(named: "AppBlack")!, colorText2: UIColor(named: "AppDarkGreen")!, text1: "Не маєте облікового запису?", text2: " Зареєструватися", font: .init(name: "HelveticaNeue", size: 11.0)!)
         
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,5 +84,5 @@ class LoginViewController: UIViewController {
     }
     
     
-   
+    
 }
