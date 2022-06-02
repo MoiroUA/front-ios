@@ -480,7 +480,7 @@
         <!--Main Tab Bar View Controller-->
         <scene sceneID="iYs-4N-O1S">
             <objects>
-                <tabBarController storyboardIdentifier="MainViewController" id="V1U-2U-MDH" customClass="MainTabBarViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarViewController" id="V1U-2U-MDH" customClass="MainTabBarViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fm9-ba-bMU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

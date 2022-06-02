@@ -1,13 +1,14 @@
 //
-//  UserModel.swift
-//  Vision
+//  User.swift
+//  MoyaApiConnection
 //
-//  Created by Denys on 26.05.2022.
+//  Created by Denys on 02.06.2022.
 //
 
 import Foundation
+import Moya
 
-struct MyUser {
+struct User: Decodable {
     private(set) var first_name: String
     private(set) var last_name: String
     private(set) var email: String

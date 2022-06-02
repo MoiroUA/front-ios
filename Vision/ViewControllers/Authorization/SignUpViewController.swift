@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Moya
 class SignUpViewController: UIViewController {
     @IBOutlet var emailTextField: RoundedTextField!
     @IBOutlet var confirmedPasswordTextField: RoundedTextField!
@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet var signUp: RoundedButton!
     @IBOutlet var firstNameTextField: RoundedTextField!
     let textColored: TextColored = TextColored()
+    let userProvider =  MoyaProvider<UserService>()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,9 +41,20 @@ class SignUpViewController: UIViewController {
             // create the user
             // Transmit to main screen
             
-            APIServices.makePOSTRequestRegister(urlPostRegister: "https://vision-moiro.herokuapp.com/user/registration", firstName: firstNameTextField, lastName: lastNameTextField, email: emailTextField, password: passwordTextField)
+            userProvider.request(.createUser(first_name: firstNameTextField.text!, last_name: lastNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)){ result in
+                
+                switch result {
+                case .success(let response):
+                    let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
+                    print(json)
+                    self.signUP()
+                case .failure(let error):
+                    print(error)
+                    
+                }
+            }
            
-            signUP()
+            
         }
         
         
@@ -88,7 +100,7 @@ class SignUpViewController: UIViewController {
     func signUP() {
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
         navigationController?.setViewControllers([vc], animated: true)
         
     }

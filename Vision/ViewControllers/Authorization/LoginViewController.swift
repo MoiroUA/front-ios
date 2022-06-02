@@ -6,16 +6,17 @@
 //
 
 import UIKit
-
+import Moya
+import SwiftKeychainWrapper
 class LoginViewController: UIViewController {
     
-    var authToken: String?
+    
     @IBOutlet private var email: RoundedTextField!
     @IBOutlet var password: RoundedTextField!
     let textColored: TextColored = TextColored()
     @IBOutlet var signUp: UIButton!
     @IBOutlet var signIn: RoundedButton!
-    
+    let userProvider =  MoyaProvider<UserService>()
     
     
     override func viewDidLoad() {
@@ -49,14 +50,38 @@ class LoginViewController: UIViewController {
     
     func login () {
         // Sign in method
-        APIServices.makePOSTRequestLogin(urlPostLogin: "https://vision-moiro.herokuapp.com/user/login", email: email, password: password)
+        userProvider.request(.loginUser(username: email.text!, password: password.text!)){ result in
+            switch result {
+            case .success(let response):
+                let json = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as? NSDictionary
+                if let parseJSON = json {
+                    let accessToken = parseJSON["token"] as? String
+                
+                    print("accessToken: \(String(describing: accessToken))")
+                    if accessToken == nil {
+                        print("AccessToken is not true")
+                        return
+                    }
+                    DispatchQueue.main.async {
+                        self.pushMain()
+                    }
+                }
+                
+    
+            case .failure(let error):
+                print(error)
+                
+            }
+        }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MainViewController")
-        navigationController?.setViewControllers([vc], animated: true)
+        
     }
     
-  
+    func pushMain() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
+        navigationController?.setViewControllers([vc], animated: true)
+    }
     
     
    
