@@ -78,9 +78,14 @@ class LoginViewController: UIViewController {
     }
     
     func pushMain() {
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        let window = windowScene?.windows.first
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
-        navigationController?.setViewControllers([vc], animated: true)
+        let homePage = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
+        window?.rootViewController = homePage
+        window?.makeKeyAndVisible()
+        
     }
     
     

@@ -47,7 +47,10 @@ class SignUpViewController: UIViewController {
                 case .success(let response):
                     let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
                     print(json)
-                    self.signUP()
+                    DispatchQueue.main.async {
+                        self.signUP()
+                    }
+                    
                 case .failure(let error):
                     print(error)
                     
@@ -97,10 +100,13 @@ class SignUpViewController: UIViewController {
     
     // MARK: - sign up func
     func signUP() {
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        let window = windowScene?.windows.first
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
-        navigationController?.setViewControllers([vc], animated: true)
-        
+        let homePage = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
+        window?.rootViewController = homePage
+        window?.makeKeyAndVisible()
     }
     
     @IBAction func signInTapped(_ sender: Any) {

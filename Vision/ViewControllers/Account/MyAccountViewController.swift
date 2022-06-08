@@ -6,27 +6,39 @@
 //
 
 import UIKit
-
+import Moya
 class MyAccountViewController: UIViewController {
     @IBOutlet var name: UILabel!
-    
     @IBOutlet var email: UILabel!
-    @IBOutlet var lastName: UILabel!
+    @IBOutlet var logOut: UIButton!
+    @IBOutlet var editInfo: UIButton!
+    let userProvider =  MoyaProvider<UserService>()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        userProvider.request(.readUsers){ result in
+                switch result {
+                case .success(let response):
+                    let json = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as? NSDictionary
+                    if let parseJSON = json {
+                        let first_name = parseJSON["first_name"] as? String
+                        let last_name = parseJSON["last_name"] as? String
+                        let email = parseJSON["email"] as? String
+                        self.email.text = email
+                        self.name.text = first_name! + " " + last_name!
+                    }
+                case .failure(let error):
+                    print(error)
+                    
+                }
+        }
+        
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

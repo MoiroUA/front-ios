@@ -30,6 +30,9 @@
 		9AF0143A2831D89D0059EDA8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF014392831D89C0059EDA8 /* RoundedButton.swift */; };
 		9AF0143C2831D8A10059EDA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0143B2831D8A10059EDA8 /* LoginViewController.swift */; };
 		9AF0143E2831D8A60059EDA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0143D2831D8A60059EDA8 /* SignUpViewController.swift */; };
+		9AF1273B284DFB8300A764DB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1273A284DFB8300A764DB /* MapViewController.swift */; };
+		9AF1273E284E643500A764DB /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF1273D284E643500A764DB /* NewsTableViewCell.swift */; };
+		9AF12741284E651700A764DB /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF12740284E651700A764DB /* NewsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,9 @@
 		9AF014392831D89C0059EDA8 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		9AF0143B2831D8A10059EDA8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9AF0143D2831D8A60059EDA8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9AF1273A284DFB8300A764DB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9AF1273D284E643500A764DB /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		9AF12740284E651700A764DB /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		B75360EC50014F578BF2994E /* Pods_Vision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8F125421A8AFFE24746099 /* Pods-Vision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vision.release.xcconfig"; path = "Target Support Files/Pods-Vision/Pods-Vision.release.xcconfig"; sourceTree = "<group>"; };
 		DE544CE994BB134C22A5E0F5 /* Pods-VisionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VisionTests.release.xcconfig"; path = "Target Support Files/Pods-VisionTests/Pods-VisionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,9 +221,11 @@
 		9A594E7E283C27FC000A19A9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9AF1273F284E644200A764DB /* News */,
 				9A0F5A5D28326210000C06F0 /* Authorization */,
 				9A594E7F283C2820000A19A9 /* Main */,
 				9AB503D9283FD2A300411700 /* User */,
+				9AF1273C284DFB9D00A764DB /* Map */,
 				9AB2C3EB28427FC2001B57CA /* Account */,
 			);
 			path = ViewControllers;
@@ -262,6 +270,23 @@
 				9AAAB20E2848F9D3009E950F /* User.swift */,
 			);
 			path = UserModel;
+			sourceTree = "<group>";
+		};
+		9AF1273C284DFB9D00A764DB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				9AF1273A284DFB8300A764DB /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		9AF1273F284E644200A764DB /* News */ = {
+			isa = PBXGroup;
+			children = (
+				9AF12740284E651700A764DB /* NewsViewController.swift */,
+				9AF1273D284E643500A764DB /* NewsTableViewCell.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +531,7 @@
 			files = (
 				9AF0143C2831D8A10059EDA8 /* LoginViewController.swift in Sources */,
 				9AB503B4283F98D100411700 /* Utilities.swift in Sources */,
+				9AF1273E284E643500A764DB /* NewsTableViewCell.swift in Sources */,
 				9ACC8B942842665A00C2C023 /* MyAccountViewController.swift in Sources */,
 				9AD19430283F6E8A009091B7 /* UserViewController.swift in Sources */,
 				9AF0143E2831D8A60059EDA8 /* SignUpViewController.swift in Sources */,
@@ -517,6 +543,8 @@
 				9AD1942E283F626D009091B7 /* MainTabBarViewController.swift in Sources */,
 				9A27CF7A28355D4F009D8074 /* TextColored.swift in Sources */,
 				9AF014382831D8980059EDA8 /* RoundedTextField.swift in Sources */,
+				9AF1273B284DFB8300A764DB /* MapViewController.swift in Sources */,
+				9AF12741284E651700A764DB /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

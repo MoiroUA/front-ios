@@ -7,7 +7,7 @@
 
 import Foundation
 import Moya
-
+import SwiftKeychainWrapper
 enum UserService {
     case createUser(first_name: String, last_name: String, email: String, password: String)
     case loginUser(username: String, password: String)
@@ -25,12 +25,14 @@ extension UserService: TargetType {
     
     var path: String {
         switch self {
-        case .readUsers, .createUser(_, _, _, _):
+        case .createUser(_, _, _, _):
             return "/registration"
         case .loginUser(_, _):
             return "/login"
         case .updateUser(let email, _, _), .deleteUser(let email):
             return "/soon/ \(email)"
+        case .readUsers:
+            return "/profile"
         }
     }
     var method: Moya.Method {
@@ -85,12 +87,17 @@ extension UserService: TargetType {
                 "phone_number": phoneNumber,
                 
             ], encoding: JSONEncoding.default)
-            
         }
     }
-    
-    var headers: [String : String]? {
-        return ["Content-Type" : "application/json"]
+    var headers: [String: String]? {
+        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+      return ["Authorization": "Token \(accessToken!)"]
     }
+    
+    
+    
+//    var headers: [String : String]? {
+//        return ["Content-Type" : "application/json"]
+//    }
     
 }
