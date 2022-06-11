@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l7W-aW-thv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="signIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGE-Aa-beE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вхід " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EO-1O-XEU" userLabel="Вхід">
+                                        <rect key="frame" x="159" y="150" width="96.5" height="48"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                        <color key="textColor" name="AppDarkGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Електронна пошта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NrF-q6-mM7" customClass="RoundedTextField" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="268" width="338" height="50"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kaR-f2-Yqh"/>
+                                        </constraints>
+                                        <color key="textColor" name="AppBlack"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va4-z9-v48">
+                                        <rect key="frame" x="263" y="423" width="111" height="27.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Забули пароль?">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                            <color key="baseForegroundColor" name="AppDarkGreen"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLv-4C-H8B" customClass="RoundedButton" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="55" y="600.5" width="304" height="70"/>
+                                        <color key="backgroundColor" red="0.24571374060000001" green="0.59903842210000002" blue="0.60169905420000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="wjE-Ca-Yeo"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Увійти">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                            <color key="baseForegroundColor" name="AppWhite"/>
+                                            <color key="baseBackgroundColor" name="AppDarkGreen"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uHo-kP-LSa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXo-zn-irH">
+                                        <rect key="frame" x="66" y="828" width="282" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Не маєте облікового запису? Зареєструватися">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                            <color key="baseForegroundColor" name="AppDarkGreen"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Elq-DD-w5B"/>
+                                            <segue destination="7dm-OB-OwL" kind="presentation" modalPresentationStyle="fullScreen" id="9bs-SY-Mv2"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="duV-5I-ysV" customClass="RoundedTextField" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="363" width="338" height="50"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="NEw-4a-kea"/>
+                                        </constraints>
+                                        <color key="textColor" name="AppBlack"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="AppPistachio"/>
+                                <constraints>
+                                    <constraint firstItem="fLv-4C-H8B" firstAttribute="leading" secondItem="SGE-Aa-beE" secondAttribute="leading" constant="55" id="0d8-e8-vr8"/>
+                                    <constraint firstItem="NrF-q6-mM7" firstAttribute="leading" secondItem="SGE-Aa-beE" secondAttribute="leading" constant="40" id="3ei-1b-Bft"/>
+                                    <constraint firstItem="fLv-4C-H8B" firstAttribute="top" secondItem="va4-z9-v48" secondAttribute="bottom" constant="150" id="IyO-ze-Eba"/>
+                                    <constraint firstAttribute="trailing" secondItem="NrF-q6-mM7" secondAttribute="trailing" constant="36" id="Kxd-op-IkE"/>
+                                    <constraint firstItem="duV-5I-ysV" firstAttribute="leading" secondItem="SGE-Aa-beE" secondAttribute="leading" constant="40" id="LvC-pz-45O"/>
+                                    <constraint firstItem="9EO-1O-XEU" firstAttribute="centerX" secondItem="SGE-Aa-beE" secondAttribute="centerX" id="NoC-hp-mEG"/>
+                                    <constraint firstAttribute="trailing" secondItem="fLv-4C-H8B" secondAttribute="trailing" constant="55" id="Uw5-q3-vDf"/>
+                                    <constraint firstItem="9EO-1O-XEU" firstAttribute="centerX" secondItem="SGE-Aa-beE" secondAttribute="centerX" id="V4X-wC-6c8"/>
+                                    <constraint firstItem="9EO-1O-XEU" firstAttribute="top" secondItem="SGE-Aa-beE" secondAttribute="top" constant="150" id="XG0-xY-pQj"/>
+                                    <constraint firstAttribute="trailing" secondItem="va4-z9-v48" secondAttribute="trailing" constant="40" id="ZGF-1H-2p8"/>
+                                    <constraint firstAttribute="bottom" secondItem="AXo-zn-irH" secondAttribute="bottom" constant="40" id="ZxK-fL-97e"/>
+                                    <constraint firstItem="NrF-q6-mM7" firstAttribute="top" secondItem="SGE-Aa-beE" secondAttribute="top" constant="268" id="bje-An-FhG"/>
+                                    <constraint firstAttribute="trailing" secondItem="duV-5I-ysV" secondAttribute="trailing" constant="36" id="cZR-e1-oPC"/>
+                                    <constraint firstItem="duV-5I-ysV" firstAttribute="top" secondItem="NrF-q6-mM7" secondAttribute="bottom" constant="45" id="hAf-6y-7dr"/>
+                                    <constraint firstItem="AXo-zn-irH" firstAttribute="centerX" secondItem="SGE-Aa-beE" secondAttribute="centerX" id="olT-YV-9qr"/>
+                                    <constraint firstItem="va4-z9-v48" firstAttribute="top" secondItem="duV-5I-ysV" secondAttribute="bottom" constant="10" id="vZf-aL-Ctx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SGE-Aa-beE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2fa-Xd-3jy"/>
+                            <constraint firstItem="SGE-Aa-beE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EnO-87-dbu"/>
+                            <constraint firstItem="SGE-Aa-beE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ggF-lV-BlS"/>
+                            <constraint firstAttribute="bottom" secondItem="SGE-Aa-beE" secondAttribute="bottom" id="pJB-qE-Ahk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3gk-tT-cx5"/>
+                    <connections>
+                        <outlet property="email" destination="NrF-q6-mM7" id="MuD-wi-Cr4"/>
+                        <outlet property="password" destination="duV-5I-ysV" id="PxT-AO-5aM"/>
+                        <outlet property="signIn" destination="fLv-4C-H8B" id="NeL-fP-Imd"/>
+                        <outlet property="signUp" destination="AXo-zn-irH" id="Bxb-qT-PZq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="83.705357142857139"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="TYZ-h2-wyc">
+            <objects>
+                <viewController storyboardIdentifier="signUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7dm-OB-OwL" customClass="SignUpViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bMa-nK-4yU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nE8-FL-trV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Реєстрація" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Yv-WZ-wE1">
+                                        <rect key="frame" x="96.5" y="150" width="221" height="48"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                        <color key="textColor" name="AppDarkGreen"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ім’я" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLq-eO-ROr" customClass="RoundedTextField" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="268" width="338" height="50"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="FlD-Vh-PRR"/>
+                                        </constraints>
+                                        <color key="textColor" name="AppBlack"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Прізвище" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7YS-9X-BUo" customClass="RoundedTextField" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="363" width="338" height="50"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="eqH-GE-h9Q"/>
+                                        </constraints>
+                                        <color key="textColor" name="AppBlack"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Електронна пошта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGE-EN-wPQ" customClass="RoundedTextField" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="458" width="338" height="50"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ncO-nm-TXZ"/>
+                                        </constraints>
+                                        <color key="textColor" name="AppBlack"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Створіть пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtu-rV-mq7" customClass="RoundedTextField" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="553" width="334" height="50"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="q1D-KH-IHd"/>
+                                        </constraints>
+                                        <color key="textColor" name="AppBlack"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Підтвердіть свій пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWW-0x-yyY" customClass="RoundedTextField" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="648" width="334" height="50"/>
+                                        <color key="backgroundColor" name="AppWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="tBe-JL-49K"/>
+                                        </constraints>
+                                        <color key="textColor" name="AppBlack"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCi-Tg-XeX" customClass="RoundedButton" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="768" width="314" height="66"/>
+                                        <color key="backgroundColor" name="AppDarkGreen"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="66" id="I98-Fy-BJz"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Зареєструватись">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                            <color key="baseForegroundColor" name="AppWhite"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="7dm-OB-OwL" eventType="touchUpInside" id="EIR-fP-lMj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTI-sD-G4a">
+                                        <rect key="frame" x="97" y="828" width="220.5" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Вже маєте обліковий запис? Увійти">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
+                                            <color key="baseForegroundColor" name="AppDarkGreen"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="7dm-OB-OwL" eventType="touchUpInside" id="0dY-7a-cqd"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="EY3-5M-Icg"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au9-b3-Lci">
+                                        <rect key="frame" x="186.5" y="713" width="41" height="10"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" red="0.99887412789999996" green="0.17488923670000001" blue="0.33298572900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="AppPistachio"/>
+                                <constraints>
+                                    <constraint firstItem="EWW-0x-yyY" firstAttribute="leading" secondItem="nE8-FL-trV" secondAttribute="leading" constant="40" id="3Jh-w7-FPu"/>
+                                    <constraint firstAttribute="trailing" secondItem="qtu-rV-mq7" secondAttribute="trailing" constant="40" id="4U0-wA-hbm"/>
+                                    <constraint firstAttribute="trailing" secondItem="7YS-9X-BUo" secondAttribute="trailing" constant="36" id="6VM-gn-jLn"/>
+                                    <constraint firstAttribute="trailing" secondItem="cGE-EN-wPQ" secondAttribute="trailing" constant="36" id="7yl-Nt-Tq1"/>
+                                    <constraint firstItem="7YS-9X-BUo" firstAttribute="top" secondItem="OLq-eO-ROr" secondAttribute="bottom" priority="998" constant="45" id="Ayx-q0-G3Q"/>
+                                    <constraint firstItem="Au9-b3-Lci" firstAttribute="top" secondItem="EWW-0x-yyY" secondAttribute="bottom" constant="15" id="Euf-L4-zdE"/>
+                                    <constraint firstItem="Au9-b3-Lci" firstAttribute="centerX" secondItem="nE8-FL-trV" secondAttribute="centerX" id="Fum-BC-dgf"/>
+                                    <constraint firstItem="7YS-9X-BUo" firstAttribute="leading" secondItem="nE8-FL-trV" secondAttribute="leading" constant="40" id="OVK-RM-CyK"/>
+                                    <constraint firstItem="5Yv-WZ-wE1" firstAttribute="centerX" secondItem="nE8-FL-trV" secondAttribute="centerX" id="PIw-dy-il6"/>
+                                    <constraint firstItem="WTI-sD-G4a" firstAttribute="centerX" secondItem="nE8-FL-trV" secondAttribute="centerX" id="PzL-lt-zxO"/>
+                                    <constraint firstItem="lCi-Tg-XeX" firstAttribute="leading" secondItem="nE8-FL-trV" secondAttribute="leading" constant="50" id="QKl-dX-d1V"/>
+                                    <constraint firstAttribute="trailing" secondItem="lCi-Tg-XeX" secondAttribute="trailing" constant="50" id="Qqc-G1-GQT"/>
+                                    <constraint firstAttribute="trailing" secondItem="OLq-eO-ROr" secondAttribute="trailing" constant="36" id="TJ1-mE-XJY"/>
+                                    <constraint firstAttribute="bottom" secondItem="WTI-sD-G4a" secondAttribute="bottom" constant="40" id="XeK-mF-xyP"/>
+                                    <constraint firstItem="OLq-eO-ROr" firstAttribute="leading" secondItem="nE8-FL-trV" secondAttribute="leading" constant="40" id="ZdO-c1-cZn"/>
+                                    <constraint firstItem="cGE-EN-wPQ" firstAttribute="leading" secondItem="nE8-FL-trV" secondAttribute="leading" constant="40" id="cbQ-hd-rva"/>
+                                    <constraint firstItem="5Yv-WZ-wE1" firstAttribute="top" secondItem="nE8-FL-trV" secondAttribute="top" priority="998" constant="150" id="gr3-Pm-Vg9"/>
+                                    <constraint firstItem="qtu-rV-mq7" firstAttribute="leading" secondItem="nE8-FL-trV" secondAttribute="leading" constant="40" id="lPt-Qw-tgF"/>
+                                    <constraint firstItem="cGE-EN-wPQ" firstAttribute="top" secondItem="7YS-9X-BUo" secondAttribute="bottom" priority="998" constant="45" id="oDO-kj-HpJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="EWW-0x-yyY" secondAttribute="trailing" constant="40" id="r3d-1y-ZLL"/>
+                                    <constraint firstItem="qtu-rV-mq7" firstAttribute="top" secondItem="cGE-EN-wPQ" secondAttribute="bottom" priority="998" constant="45" id="rpY-ZO-fvb"/>
+                                    <constraint firstItem="EWW-0x-yyY" firstAttribute="top" secondItem="qtu-rV-mq7" secondAttribute="bottom" priority="998" constant="45" id="s5a-wq-umf"/>
+                                    <constraint firstItem="lCi-Tg-XeX" firstAttribute="top" secondItem="EWW-0x-yyY" secondAttribute="bottom" constant="70" id="yDA-Km-ELa"/>
+                                    <constraint firstItem="OLq-eO-ROr" firstAttribute="top" secondItem="5Yv-WZ-wE1" secondAttribute="bottom" priority="998" constant="70" id="ypG-It-3PK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l7b-yh-Av2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nE8-FL-trV" firstAttribute="top" secondItem="bMa-nK-4yU" secondAttribute="top" id="4J8-lU-y1S"/>
+                            <constraint firstItem="nE8-FL-trV" firstAttribute="trailing" secondItem="l7b-yh-Av2" secondAttribute="trailing" id="TNv-kp-qro"/>
+                            <constraint firstAttribute="bottom" secondItem="nE8-FL-trV" secondAttribute="bottom" id="bbr-Ws-hsN"/>
+                            <constraint firstItem="nE8-FL-trV" firstAttribute="leading" secondItem="l7b-yh-Av2" secondAttribute="leading" id="kTb-VH-Gf8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dra-uJ-CWf"/>
+                    <connections>
+                        <outlet property="confirmedPasswordTextField" destination="EWW-0x-yyY" id="HRA-ZN-ij0"/>
+                        <outlet property="emailTextField" destination="cGE-EN-wPQ" id="8aX-6L-5GP"/>
+                        <outlet property="errorLabel" destination="Au9-b3-Lci" id="X95-CY-8WH"/>
+                        <outlet property="firstNameTextField" destination="OLq-eO-ROr" id="ZmU-32-wM0"/>
+                        <outlet property="lastNameTextField" destination="7YS-9X-BUo" id="cia-qZ-pAx"/>
+                        <outlet property="passwordTextField" destination="qtu-rV-mq7" id="XD6-iA-abg"/>
+                        <outlet property="signIn" destination="WTI-sD-G4a" id="T2Q-HD-48I"/>
+                        <outlet property="signUp" destination="lCi-Tg-XeX" id="7vc-iI-9F2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5Q-tq-OuN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="84"/>
+        </scene>
+        <!--Мапа-->
+        <scene sceneID="XfH-RU-tgB">
+            <objects>
+                <viewController id="hiq-Ee-bFH" customClass="MapViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iLH-l9-djw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="m5y-JT-OL9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Мапа" image="map" selectedImage="map" id="txV-BL-IcU">
+                        <color key="badgeColor" name="AppDarkGreen"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgb-MX-OOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337.68115942029" y="1629.9107142857142"/>
+        </scene>
+        <!--Налаштування-->
+        <scene sceneID="oHZ-Ui-B3e">
+            <objects>
+                <viewController id="wyk-3G-eFW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KUg-Bj-3KP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Налаштування" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1A-SR-2Et">
+                                <rect key="frame" x="51" y="419.5" width="312" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скоро буде" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0C2-x3-U1K">
+                                <rect key="frame" x="161" y="496.5" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AppDarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GMn-IR-XBg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w1A-SR-2Et" firstAttribute="centerY" secondItem="KUg-Bj-3KP" secondAttribute="centerY" id="Bq0-cr-F6s"/>
+                            <constraint firstItem="0C2-x3-U1K" firstAttribute="centerX" secondItem="KUg-Bj-3KP" secondAttribute="centerX" id="J8X-Hb-xL4"/>
+                            <constraint firstItem="0C2-x3-U1K" firstAttribute="top" secondItem="w1A-SR-2Et" secondAttribute="bottom" constant="20" id="lfd-vR-wSd"/>
+                            <constraint firstItem="w1A-SR-2Et" firstAttribute="centerX" secondItem="KUg-Bj-3KP" secondAttribute="centerX" id="v85-bX-jGi"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Налаштування" image="settingsIcon" selectedImage="settingsIcon" id="Dt9-mj-gdl">
+                        <color key="badgeColor" name="AppDarkGreen"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cE-Hv-D2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2061" y="1630"/>
+        </scene>
+        <!--Закони-->
+        <scene sceneID="7es-7t-pVi">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f9h-Nw-pAT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hth-2c-kM4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Закони" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4B-jG-T57">
+                                <rect key="frame" x="131" y="420" width="152.5" height="56.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скоро буде" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9R-hd-dws">
+                                <rect key="frame" x="161" y="496.5" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AppDarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOu-yu-qfR">
+                                <rect key="frame" x="186" y="221" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="28Z-Xk-ay1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j4B-jG-T57" firstAttribute="centerY" secondItem="hth-2c-kM4" secondAttribute="centerY" id="3SN-U0-mn2"/>
+                            <constraint firstItem="j4B-jG-T57" firstAttribute="centerX" secondItem="hth-2c-kM4" secondAttribute="centerX" id="AFU-17-Lf1"/>
+                            <constraint firstItem="f9R-hd-dws" firstAttribute="top" secondItem="j4B-jG-T57" secondAttribute="bottom" constant="20" id="YhV-Lo-bJ3"/>
+                            <constraint firstItem="f9R-hd-dws" firstAttribute="centerX" secondItem="hth-2c-kM4" secondAttribute="centerX" id="afq-Xb-5tc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Закони" image="lawsIcon" selectedImage="lawsIcon" id="RY5-3U-38o">
+                        <color key="badgeColor" name="AppDarkGreen"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxp-Gw-Ldw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2709" y="1630"/>
+        </scene>
+        <!--Новини-->
+        <scene sceneID="h4J-nW-8fp">
+            <objects>
+                <viewController id="Itc-my-jsK" customClass="NewsViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Yb-Sl-6jd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новини" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-eP-3rz">
+                                <rect key="frame" x="172.5" y="94" width="69" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <color key="textColor" name="AppBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-yI-5ZK">
+                                <rect key="frame" x="0.0" y="154" width="414" height="659"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="newsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="115" id="cHZ-gb-yk0" customClass="NewsTableViewCell" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="115"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cHZ-gb-yk0" id="gCA-J4-kmV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qn-A9-aKY">
+                                                    <rect key="frame" x="22" y="5" width="370" height="95"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вартість проїзду у львівському автобусі підняли до 15 гривень. Як реагують львів’яни" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-z9-Bok">
+                                                            <rect key="frame" x="23" y="5" width="271" height="75"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpw-Zr-bbg">
+                                                            <rect key="frame" x="23" y="80" width="20" height="8"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="8"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VBr-04-Vv3">
+                                                            <rect key="frame" x="299" y="13" width="53" height="69"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="AppLightGray"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="RpP-z9-Bok" secondAttribute="trailing" constant="76" id="2lE-VP-Jgj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="VBr-04-Vv3" secondAttribute="trailing" constant="18" id="7Hc-WU-6HF"/>
+                                                        <constraint firstItem="Vpw-Zr-bbg" firstAttribute="leading" secondItem="9Qn-A9-aKY" secondAttribute="leading" constant="23" id="Jt4-GA-6Sf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="RpP-z9-Bok" secondAttribute="bottom" constant="15" id="NwR-cF-btH"/>
+                                                        <constraint firstItem="RpP-z9-Bok" firstAttribute="top" secondItem="9Qn-A9-aKY" secondAttribute="top" constant="5" id="Phc-3m-nUN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Vpw-Zr-bbg" secondAttribute="bottom" constant="7" id="cDP-3b-Xnm"/>
+                                                        <constraint firstItem="VBr-04-Vv3" firstAttribute="top" secondItem="9Qn-A9-aKY" secondAttribute="top" constant="13" id="djt-W2-RKb"/>
+                                                        <constraint firstItem="VBr-04-Vv3" firstAttribute="leading" secondItem="RpP-z9-Bok" secondAttribute="trailing" constant="5" id="huv-SY-AcP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="VBr-04-Vv3" secondAttribute="bottom" constant="13" id="leI-b1-eLb"/>
+                                                        <constraint firstItem="Vpw-Zr-bbg" firstAttribute="top" secondItem="RpP-z9-Bok" secondAttribute="bottom" id="mtw-sA-Svv"/>
+                                                        <constraint firstItem="RpP-z9-Bok" firstAttribute="leading" secondItem="9Qn-A9-aKY" secondAttribute="leading" constant="23" id="yUX-kj-UfU"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="9Qn-A9-aKY" secondAttribute="bottom" constant="15" id="Qxy-xv-q8a"/>
+                                                <constraint firstItem="9Qn-A9-aKY" firstAttribute="leading" secondItem="gCA-J4-kmV" secondAttribute="leading" constant="22" id="X6k-jp-QDU"/>
+                                                <constraint firstItem="9Qn-A9-aKY" firstAttribute="top" secondItem="gCA-J4-kmV" secondAttribute="top" constant="5" id="vvu-g0-tAC"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Qn-A9-aKY" secondAttribute="trailing" constant="22" id="xa9-a4-XFw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="Vpw-Zr-bbg" id="Q2H-L4-i6m"/>
+                                            <outlet property="newsImage" destination="VBr-04-Vv3" id="PSw-1O-V9P"/>
+                                            <outlet property="newsText" destination="RpP-z9-Bok" id="ZJH-QQ-cir"/>
+                                            <outlet property="newsView" destination="9Qn-A9-aKY" id="2rb-ji-a7s"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7fq-0A-jio"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hcJ-eP-3rz" firstAttribute="centerX" secondItem="4Yb-Sl-6jd" secondAttribute="centerX" id="1Fl-km-7o2"/>
+                            <constraint firstItem="hcJ-eP-3rz" firstAttribute="top" secondItem="7fq-0A-jio" secondAttribute="top" constant="50" id="Esw-ox-GWl"/>
+                            <constraint firstItem="pb7-yI-5ZK" firstAttribute="leading" secondItem="7fq-0A-jio" secondAttribute="leading" id="K6a-rD-ksJ"/>
+                            <constraint firstItem="pb7-yI-5ZK" firstAttribute="bottom" secondItem="7fq-0A-jio" secondAttribute="bottom" id="OPB-B9-DGm"/>
+                            <constraint firstItem="pb7-yI-5ZK" firstAttribute="top" secondItem="7fq-0A-jio" secondAttribute="top" constant="110" id="cfj-G3-JLg"/>
+                            <constraint firstItem="pb7-yI-5ZK" firstAttribute="trailing" secondItem="7fq-0A-jio" secondAttribute="trailing" id="rSN-tr-a6F"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Новини" image="newsIcon" selectedImage="newsIcon" id="q3e-Hq-HXn">
+                        <color key="badgeColor" name="AppDarkGreen"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="pb7-yI-5ZK" id="fqH-1Q-twc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1s-9v-iQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2666.666666666667" y="906.69642857142856"/>
+        </scene>
+        <!--Профіль-->
+        <scene sceneID="FR1-Ca-kZG">
+            <objects>
+                <viewController storyboardIdentifier="MyAccountViewController" id="K3W-co-Wyi" customClass="MyAccountViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gPy-Nq-9kM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="xes-YO-4tp">
+                                <rect key="frame" x="176.5" y="117" width="61" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="IVD-wP-lNh"/>
+                                    <constraint firstAttribute="height" constant="61" id="gnD-lj-zvq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1g-hz-tcZ">
+                                <rect key="frame" x="143.5" y="198" width="127.5" height="31.5"/>
+                                <string key="text">Ігор Вілков
+</string>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5U-mj-BeW">
+                                <rect key="frame" x="20" y="274" width="66.5" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" name="AppBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+380 98 404 6901" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKh-fU-GUe">
+                                <rect key="frame" x="20" y="307" width="131" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="AppDarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Електронна пошта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4z-5Y-2Lb">
+                                <rect key="frame" x="20" y="363" width="139" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О(І)+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTz-5S-OEd">
+                                <rect key="frame" x="20" y="480" width="32.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" name="AppDarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFC-bX-sEf">
+                                <rect key="frame" x="20" y="396" width="36" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" name="AppDarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CA-fU-zeU">
+                                <rect key="frame" x="101" y="746.5" width="212" height="31.5"/>
+                                <color key="tintColor" red="0.99887412789999996" green="0.17488923670000001" blue="0.33298572900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вийти з облікового запису">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rh-XN-zKQ">
+                                <rect key="frame" x="247" y="649.5" width="147" height="27"/>
+                                <color key="tintColor" name="AppDarkGreen"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Редагувати інформацію">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Група крові " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-BD-kb1">
+                                <rect key="frame" x="20" y="452" width="91" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обліковий запис" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q02-FN-v2f">
+                                <rect key="frame" x="131" y="62" width="152" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vij-GT-Wx6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iFC-bX-sEf" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="41y-hZ-erT"/>
+                            <constraint firstItem="vFu-BD-kb1" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="4ej-6f-4H1"/>
+                            <constraint firstItem="xes-YO-4tp" firstAttribute="top" secondItem="q02-FN-v2f" secondAttribute="bottom" constant="30" id="648-pQ-H4T"/>
+                            <constraint firstItem="o5U-mj-BeW" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="6jr-EB-fxD"/>
+                            <constraint firstItem="Vij-GT-Wx6" firstAttribute="bottom" secondItem="9CA-fU-zeU" secondAttribute="bottom" constant="35" id="I7G-Ji-L0h"/>
+                            <constraint firstItem="vFu-BD-kb1" firstAttribute="top" secondItem="iFC-bX-sEf" secondAttribute="bottom" constant="38" id="MGG-Cm-G1m"/>
+                            <constraint firstItem="c4z-5Y-2Lb" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="Ont-5i-DfB"/>
+                            <constraint firstItem="9CA-fU-zeU" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="PNy-7Y-l05"/>
+                            <constraint firstItem="w1g-hz-tcZ" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="Py2-lX-ZCf"/>
+                            <constraint firstItem="9CA-fU-zeU" firstAttribute="top" secondItem="7rh-XN-zKQ" secondAttribute="bottom" constant="70" id="SuQ-pC-ZYk"/>
+                            <constraint firstItem="o5U-mj-BeW" firstAttribute="top" secondItem="Vij-GT-Wx6" secondAttribute="top" constant="230" id="VBV-jw-sHn"/>
+                            <constraint firstItem="9CA-fU-zeU" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="ZUi-k0-TpA"/>
+                            <constraint firstItem="tKh-fU-GUe" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="f2r-K2-LLG"/>
+                            <constraint firstItem="c4z-5Y-2Lb" firstAttribute="top" secondItem="tKh-fU-GUe" secondAttribute="bottom" constant="38" id="gFq-Zb-DK9"/>
+                            <constraint firstItem="QTz-5S-OEd" firstAttribute="top" secondItem="vFu-BD-kb1" secondAttribute="bottom" constant="10" id="hXr-LU-UBz"/>
+                            <constraint firstItem="tKh-fU-GUe" firstAttribute="top" secondItem="o5U-mj-BeW" secondAttribute="bottom" constant="15" id="hk0-ZY-OxO"/>
+                            <constraint firstItem="QTz-5S-OEd" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="hsn-V0-tCX"/>
+                            <constraint firstItem="q02-FN-v2f" firstAttribute="top" secondItem="Vij-GT-Wx6" secondAttribute="top" constant="18" id="ka9-0E-Wkm"/>
+                            <constraint firstItem="w1g-hz-tcZ" firstAttribute="top" secondItem="xes-YO-4tp" secondAttribute="bottom" constant="20" id="o3I-xe-nC5"/>
+                            <constraint firstItem="xes-YO-4tp" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="qma-in-6BA"/>
+                            <constraint firstItem="Vij-GT-Wx6" firstAttribute="trailing" secondItem="7rh-XN-zKQ" secondAttribute="trailing" constant="20" id="tlv-FX-jRP"/>
+                            <constraint firstItem="q02-FN-v2f" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="vRw-4Q-qd7"/>
+                            <constraint firstItem="iFC-bX-sEf" firstAttribute="top" secondItem="c4z-5Y-2Lb" secondAttribute="bottom" constant="15" id="w9t-KQ-vZ7"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профіль" image="userIcon" selectedImage="userIcon" id="xGW-xD-8Me">
+                        <color key="badgeColor" name="AppDarkGreen"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="editInfo" destination="7rh-XN-zKQ" id="zzw-6a-XEd"/>
+                        <outlet property="email" destination="iFC-bX-sEf" id="rbM-fF-juv"/>
+                        <outlet property="logOut" destination="9CA-fU-zeU" id="xc2-pR-Fcr"/>
+                        <outlet property="name" destination="w1g-hz-tcZ" id="qwP-OP-Bxx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXj-d0-aXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2666.666666666667" y="242.41071428571428"/>
+        </scene>
+        <!--Main Tab Bar View Controller-->
+        <scene sceneID="iYs-4N-O1S">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarViewController" id="V1U-2U-MDH" customClass="MainTabBarViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fm9-ba-bMU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="AppWhite"/>
+                        <color key="selectedImageTintColor" name="AppDarkGreen"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hiq-Ee-bFH" kind="relationship" relationship="viewControllers" id="EHI-iw-4ai"/>
+                        <segue destination="Itc-my-jsK" kind="relationship" relationship="viewControllers" id="ohs-Ym-ErT"/>
+                        <segue destination="f9h-Nw-pAT" kind="relationship" relationship="viewControllers" id="YgK-G9-DVD"/>
+                        <segue destination="K3W-co-Wyi" kind="relationship" relationship="viewControllers" id="Vd0-x0-eTk"/>
+                        <segue destination="wyk-3G-eFW" kind="relationship" relationship="viewControllers" id="Ice-eA-BBn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZ6-fb-sgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="907"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V02-ji-yCF">
+            <objects>
+                <navigationController storyboardIdentifier="auth" automaticallyAdjustsScrollViewInsets="NO" id="l7W-aW-thv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="55a-aC-7JS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hVx-pW-9YH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izZ-yZ-8Dq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-791" y="84"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hVx-pW-9YH"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="account" width="61" height="61"/>
+        <image name="lawsIcon" width="30" height="30"/>
+        <image name="map" width="30" height="30"/>
+        <image name="newsIcon" width="33" height="24"/>
+        <image name="settingsIcon" width="30" height="30"/>
+        <image name="userIcon" width="30" height="31"/>
+        <namedColor name="AppBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppDarkGreen">
+            <color red="0.10199999809265137" green="0.45399999618530273" blue="0.45600000023841858" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppLightGray">
+            <color red="0.90600001811981201" green="0.90600001811981201" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppPistachio">
+            <color red="0.85000002384185791" green="0.97500002384185791" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
