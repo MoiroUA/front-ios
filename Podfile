@@ -6,6 +6,8 @@ target 'Vision' do
   use_frameworks!
 pod 'Moya', '~> 15.0'
 pod 'SwiftKeychainWrapper', '~> 4.0'
+pod 'GoogleMaps', '~> 6.2'
+pod 'Kingfisher', '~> 7.0'
   # Pods for Vision
 
   target 'VisionTests' do

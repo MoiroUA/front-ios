@@ -11,6 +11,8 @@
 		6DF8FB90BEE942894C1300E2 /* Pods_Vision_VisionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CCFCC484D244B29760A34F8 /* Pods_Vision_VisionUITests.framework */; };
 		74774F1FB82A012A92F1B2C0 /* Pods_VisionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23ACA1AADF075D6AD0F32B8F /* Pods_VisionTests.framework */; };
 		9A27CF7A28355D4F009D8074 /* TextColored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27CF7928355D4F009D8074 /* TextColored.swift */; };
+		9A2825802851EFB800F1B78F /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28257F2851EFB800F1B78F /* NewsService.swift */; };
+		9A2825822851F36700F1B78F /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2825812851F36700F1B78F /* Articles.swift */; };
 		9A3FCD6E2831D605003FAE84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3FCD6D2831D605003FAE84 /* AppDelegate.swift */; };
 		9A3FCD702831D605003FAE84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3FCD6F2831D605003FAE84 /* SceneDelegate.swift */; };
 		9A3FCD772831D607003FAE84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3FCD762831D607003FAE84 /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		7145FAD282AAD2C7C7F5F6DF /* Pods-Vision-VisionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vision-VisionUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vision-VisionUITests/Pods-Vision-VisionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		80CFF2EE04384E313DA96EC2 /* Pods-Vision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vision.debug.xcconfig"; path = "Target Support Files/Pods-Vision/Pods-Vision.debug.xcconfig"; sourceTree = "<group>"; };
 		9A27CF7928355D4F009D8074 /* TextColored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColored.swift; sourceTree = "<group>"; };
+		9A28257F2851EFB800F1B78F /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		9A2825812851F36700F1B78F /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		9A3FCD6A2831D605003FAE84 /* Vision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3FCD6D2831D605003FAE84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A3FCD6F2831D605003FAE84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				9AF12740284E651700A764DB /* NewsViewController.swift */,
+				9A2825812851F36700F1B78F /* Articles.swift */,
+				9A28257F2851EFB800F1B78F /* NewsService.swift */,
 				9AF1273D284E643500A764DB /* NewsTableViewCell.swift */,
 			);
 			path = News;
@@ -301,6 +307,7 @@
 				9A3FCD672831D605003FAE84 /* Frameworks */,
 				9A3FCD682831D605003FAE84 /* Resources */,
 				BCAF59A62B2F30A6A2473D2C /* [CP] Embed Pods Frameworks */,
+				DCAFD2EB9281619E185C1F90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -339,6 +346,7 @@
 				9A3FCD872831D607003FAE84 /* Frameworks */,
 				9A3FCD882831D607003FAE84 /* Resources */,
 				D40F6BCE22A46CCB3CACAE49 /* [CP] Embed Pods Frameworks */,
+				AE5ED2BEE7A38808CBCBC5ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -466,6 +474,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AE5ED2BEE7A38808CBCBC5ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vision-VisionUITests/Pods-Vision-VisionUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vision-VisionUITests/Pods-Vision-VisionUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vision-VisionUITests/Pods-Vision-VisionUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B26B0DBECA822FB4FB6B228E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,6 +547,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vision-VisionUITests/Pods-Vision-VisionUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DCAFD2EB9281619E185C1F90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vision/Pods-Vision-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vision/Pods-Vision-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vision/Pods-Vision-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -530,8 +572,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF0143C2831D8A10059EDA8 /* LoginViewController.swift in Sources */,
+				9A2825802851EFB800F1B78F /* NewsService.swift in Sources */,
 				9AB503B4283F98D100411700 /* Utilities.swift in Sources */,
 				9AF1273E284E643500A764DB /* NewsTableViewCell.swift in Sources */,
+				9A2825822851F36700F1B78F /* Articles.swift in Sources */,
 				9ACC8B942842665A00C2C023 /* MyAccountViewController.swift in Sources */,
 				9AD19430283F6E8A009091B7 /* UserViewController.swift in Sources */,
 				9AF0143E2831D8A60059EDA8 /* SignUpViewController.swift in Sources */,

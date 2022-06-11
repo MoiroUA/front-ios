@@ -289,20 +289,8 @@
                     <view key="view" contentMode="scaleToFill" id="iLH-l9-djw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r0-pi-5xu">
-                                <rect key="frame" x="146.5" y="413" width="121.5" height="70.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="59"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="m5y-JT-OL9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="4r0-pi-5xu" firstAttribute="centerY" secondItem="iLH-l9-djw" secondAttribute="centerY" id="N6y-Kc-hzp"/>
-                            <constraint firstItem="4r0-pi-5xu" firstAttribute="centerX" secondItem="iLH-l9-djw" secondAttribute="centerX" id="fVa-tw-j3F"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Мапа" image="map" selectedImage="map" id="txV-BL-IcU">
                         <color key="badgeColor" name="AppDarkGreen"/>
@@ -310,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgb-MX-OOC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339" y="1630"/>
+            <point key="canvasLocation" x="1337.68115942029" y="1629.9107142857142"/>
         </scene>
         <!--Налаштування-->
         <scene sceneID="oHZ-Ui-B3e">
@@ -370,6 +358,12 @@
                                 <color key="textColor" name="AppDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOu-yu-qfR">
+                                <rect key="frame" x="186" y="221" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="28Z-Xk-ay1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -391,64 +385,76 @@
         <!--Новини-->
         <scene sceneID="h4J-nW-8fp">
             <objects>
-                <viewController id="Itc-my-jsK" customClass="NewsViewController" sceneMemberID="viewController">
+                <viewController id="Itc-my-jsK" customClass="NewsViewController" customModule="Vision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Yb-Sl-6jd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новини" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-eP-3rz">
-                                <rect key="frame" x="172.5" y="62" width="69" height="25"/>
+                                <rect key="frame" x="172.5" y="94" width="69" height="25"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <color key="textColor" name="AppBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-yI-5ZK">
-                                <rect key="frame" x="0.0" y="84" width="414" height="729"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-yI-5ZK">
+                                <rect key="frame" x="0.0" y="174" width="414" height="639"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="93" id="cHZ-gb-yk0" customClass="NewsTableViewCell" customModule="Vision" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="93"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="newsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="115" id="cHZ-gb-yk0" customClass="NewsTableViewCell" customModule="Vision" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cHZ-gb-yk0" id="gCA-J4-kmV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qn-A9-aKY">
-                                                    <rect key="frame" x="10" y="5" width="394" height="83"/>
+                                                    <rect key="frame" x="22" y="5" width="370" height="95"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="newsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VBr-04-Vv3">
-                                                            <rect key="frame" x="336" y="8" width="50" height="61"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="7Oa-Xl-htx"/>
-                                                                <constraint firstAttribute="height" constant="50" id="aoK-lC-uNw"/>
-                                                            </constraints>
-                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вартість проїзду у львівському автобусі підняли до 15 гривень. Як реагують львів’яни" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpP-z9-Bok">
-                                                            <rect key="frame" x="5" y="5" width="329" height="73"/>
+                                                            <rect key="frame" x="23" y="5" width="271" height="75"/>
                                                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpw-Zr-bbg">
+                                                            <rect key="frame" x="23" y="80" width="20" height="8"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="8"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="VBr-04-Vv3">
+                                                            <rect key="frame" x="299" y="13" width="60" height="69"/>
+                                                        </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                    <color key="backgroundColor" name="AppLightGray"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="RpP-z9-Bok" secondAttribute="trailing" constant="60" id="2lE-VP-Jgj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="VBr-04-Vv3" secondAttribute="trailing" constant="10" id="NTW-bq-uFg"/>
-                                                        <constraint firstAttribute="bottom" secondItem="RpP-z9-Bok" secondAttribute="bottom" constant="5" id="NwR-cF-btH"/>
-                                                        <constraint firstItem="VBr-04-Vv3" firstAttribute="top" secondItem="9Qn-A9-aKY" secondAttribute="top" constant="3" id="VdT-4m-3ai"/>
-                                                        <constraint firstItem="RpP-z9-Bok" firstAttribute="top" secondItem="9Qn-A9-aKY" secondAttribute="top" constant="5" id="jau-Ah-kaF"/>
-                                                        <constraint firstAttribute="bottom" secondItem="VBr-04-Vv3" secondAttribute="bottom" constant="3" id="sZ6-ks-dKg"/>
-                                                        <constraint firstItem="RpP-z9-Bok" firstAttribute="leading" secondItem="9Qn-A9-aKY" secondAttribute="leading" constant="5" id="yUX-kj-UfU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="RpP-z9-Bok" secondAttribute="trailing" constant="76" id="2lE-VP-Jgj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="VBr-04-Vv3" secondAttribute="trailing" constant="11" id="7Hc-WU-6HF"/>
+                                                        <constraint firstItem="Vpw-Zr-bbg" firstAttribute="leading" secondItem="9Qn-A9-aKY" secondAttribute="leading" constant="23" id="Jt4-GA-6Sf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="RpP-z9-Bok" secondAttribute="bottom" constant="15" id="NwR-cF-btH"/>
+                                                        <constraint firstItem="RpP-z9-Bok" firstAttribute="top" secondItem="9Qn-A9-aKY" secondAttribute="top" constant="5" id="Phc-3m-nUN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Vpw-Zr-bbg" secondAttribute="bottom" constant="7" id="cDP-3b-Xnm"/>
+                                                        <constraint firstItem="VBr-04-Vv3" firstAttribute="top" secondItem="9Qn-A9-aKY" secondAttribute="top" constant="13" id="djt-W2-RKb"/>
+                                                        <constraint firstItem="VBr-04-Vv3" firstAttribute="leading" secondItem="RpP-z9-Bok" secondAttribute="trailing" constant="5" id="huv-SY-AcP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="VBr-04-Vv3" secondAttribute="bottom" constant="13" id="leI-b1-eLb"/>
+                                                        <constraint firstItem="Vpw-Zr-bbg" firstAttribute="top" secondItem="RpP-z9-Bok" secondAttribute="bottom" id="mtw-sA-Svv"/>
+                                                        <constraint firstItem="RpP-z9-Bok" firstAttribute="leading" secondItem="9Qn-A9-aKY" secondAttribute="leading" constant="23" id="yUX-kj-UfU"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="9Qn-A9-aKY" secondAttribute="bottom" constant="5" id="Qxy-xv-q8a"/>
-                                                <constraint firstItem="9Qn-A9-aKY" firstAttribute="leading" secondItem="gCA-J4-kmV" secondAttribute="leading" constant="10" id="X6k-jp-QDU"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Qn-A9-aKY" secondAttribute="bottom" constant="15" id="Qxy-xv-q8a"/>
+                                                <constraint firstItem="9Qn-A9-aKY" firstAttribute="leading" secondItem="gCA-J4-kmV" secondAttribute="leading" constant="22" id="X6k-jp-QDU"/>
                                                 <constraint firstItem="9Qn-A9-aKY" firstAttribute="top" secondItem="gCA-J4-kmV" secondAttribute="top" constant="5" id="vvu-g0-tAC"/>
-                                                <constraint firstAttribute="trailing" secondItem="9Qn-A9-aKY" secondAttribute="trailing" constant="10" id="xa9-a4-XFw"/>
+                                                <constraint firstAttribute="trailing" secondItem="9Qn-A9-aKY" secondAttribute="trailing" constant="22" id="xa9-a4-XFw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="Vpw-Zr-bbg" id="Q2H-L4-i6m"/>
+                                            <outlet property="newsImage" destination="VBr-04-Vv3" id="PSw-1O-V9P"/>
+                                            <outlet property="newsText" destination="RpP-z9-Bok" id="ZJH-QQ-cir"/>
+                                            <outlet property="newsView" destination="9Qn-A9-aKY" id="2rb-ji-a7s"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -457,16 +463,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hcJ-eP-3rz" firstAttribute="centerX" secondItem="4Yb-Sl-6jd" secondAttribute="centerX" id="1Fl-km-7o2"/>
-                            <constraint firstItem="hcJ-eP-3rz" firstAttribute="top" secondItem="7fq-0A-jio" secondAttribute="top" constant="18" id="Esw-ox-GWl"/>
+                            <constraint firstItem="hcJ-eP-3rz" firstAttribute="top" secondItem="7fq-0A-jio" secondAttribute="top" constant="50" id="Esw-ox-GWl"/>
                             <constraint firstItem="pb7-yI-5ZK" firstAttribute="leading" secondItem="7fq-0A-jio" secondAttribute="leading" id="K6a-rD-ksJ"/>
                             <constraint firstItem="pb7-yI-5ZK" firstAttribute="bottom" secondItem="7fq-0A-jio" secondAttribute="bottom" id="OPB-B9-DGm"/>
-                            <constraint firstItem="pb7-yI-5ZK" firstAttribute="top" secondItem="7fq-0A-jio" secondAttribute="top" constant="40" id="cfj-G3-JLg"/>
+                            <constraint firstItem="pb7-yI-5ZK" firstAttribute="top" secondItem="7fq-0A-jio" secondAttribute="top" constant="130" id="cfj-G3-JLg"/>
                             <constraint firstItem="pb7-yI-5ZK" firstAttribute="trailing" secondItem="7fq-0A-jio" secondAttribute="trailing" id="rSN-tr-a6F"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Новини" image="newsIcon" selectedImage="newsIcon" id="q3e-Hq-HXn">
                         <color key="badgeColor" name="AppDarkGreen"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="pb7-yI-5ZK" id="fqH-1Q-twc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1s-9v-iQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -603,7 +612,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fm9-ba-bMU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="AppWhite"/>
+                        <color key="selectedImageTintColor" name="AppDarkGreen"/>
                     </tabBar>
                     <connections>
                         <segue destination="hiq-Ee-bFH" kind="relationship" relationship="viewControllers" id="EHI-iw-4ai"/>
@@ -652,6 +662,9 @@
         <namedColor name="AppDarkGreen">
             <color red="0.10199999809265137" green="0.45399999618530273" blue="0.45600000023841858" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="AppLightGray">
+            <color red="0.90588241820000004" green="0.90588241820000004" blue="0.90588241820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="AppPistachio">
             <color red="0.85000002384185791" green="0.97500002384185791" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -660,9 +673,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

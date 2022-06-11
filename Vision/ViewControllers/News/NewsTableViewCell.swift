@@ -9,9 +9,15 @@ import UIKit
 
 class NewsTableViewCell: UITableViewCell {
 
+    @IBOutlet var newsImage: UIImageView!
+    @IBOutlet var newsText: UILabel!
+    @IBOutlet var newsView: UIView!
+    
+    @IBOutlet var name: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
