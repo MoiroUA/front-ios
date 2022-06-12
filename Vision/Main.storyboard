@@ -490,14 +490,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Account" translatesAutoresizingMaskIntoConstraints="NO" id="xes-YO-4tp">
-                                <rect key="frame" x="176.5" y="117" width="61" height="61"/>
+                                <rect key="frame" x="176.5" y="149" width="61" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="IVD-wP-lNh"/>
                                     <constraint firstAttribute="height" constant="61" id="gnD-lj-zvq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1g-hz-tcZ">
-                                <rect key="frame" x="143.5" y="198" width="127.5" height="31.5"/>
+                                <rect key="frame" x="143.5" y="230" width="127.5" height="31.5"/>
                                 <string key="text">Ігор Вілков
 </string>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
@@ -505,31 +505,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телефон" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5U-mj-BeW">
-                                <rect key="frame" x="20" y="274" width="66.5" height="18"/>
+                                <rect key="frame" x="30" y="314" width="66.5" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" name="AppBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+380 98 404 6901" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKh-fU-GUe">
-                                <rect key="frame" x="20" y="307" width="131" height="18"/>
+                                <rect key="frame" x="30" y="347" width="131" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="AppDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Електронна пошта" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4z-5Y-2Lb">
-                                <rect key="frame" x="20" y="363" width="139" height="18"/>
+                                <rect key="frame" x="30" y="403" width="139" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О(І)+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTz-5S-OEd">
-                                <rect key="frame" x="20" y="480" width="32.5" height="17.5"/>
+                                <rect key="frame" x="30" y="520" width="32.5" height="17.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" name="AppDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFC-bX-sEf">
-                                <rect key="frame" x="20" y="396" width="36" height="18"/>
+                                <rect key="frame" x="30" y="436" width="36" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" name="AppDarkGreen"/>
                                 <nil key="highlightedColor"/>
@@ -543,7 +543,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rh-XN-zKQ">
-                                <rect key="frame" x="247" y="649.5" width="147" height="27"/>
+                                <rect key="frame" x="232" y="589.5" width="147" height="27"/>
                                 <color key="tintColor" name="AppDarkGreen"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Редагувати інформацію">
@@ -551,13 +551,13 @@
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Група крові " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-BD-kb1">
-                                <rect key="frame" x="20" y="452" width="91" height="18"/>
+                                <rect key="frame" x="30" y="492" width="91" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обліковий запис" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q02-FN-v2f">
-                                <rect key="frame" x="131" y="62" width="152" height="25"/>
+                                <rect key="frame" x="131" y="94" width="152" height="25"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -566,27 +566,27 @@
                         <viewLayoutGuide key="safeArea" id="Vij-GT-Wx6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iFC-bX-sEf" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="41y-hZ-erT"/>
-                            <constraint firstItem="vFu-BD-kb1" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="4ej-6f-4H1"/>
+                            <constraint firstItem="iFC-bX-sEf" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="30" id="41y-hZ-erT"/>
+                            <constraint firstItem="vFu-BD-kb1" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="30" id="4ej-6f-4H1"/>
                             <constraint firstItem="xes-YO-4tp" firstAttribute="top" secondItem="q02-FN-v2f" secondAttribute="bottom" constant="30" id="648-pQ-H4T"/>
-                            <constraint firstItem="o5U-mj-BeW" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="6jr-EB-fxD"/>
+                            <constraint firstItem="o5U-mj-BeW" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="30" id="6jr-EB-fxD"/>
                             <constraint firstItem="Vij-GT-Wx6" firstAttribute="bottom" secondItem="9CA-fU-zeU" secondAttribute="bottom" constant="35" id="I7G-Ji-L0h"/>
                             <constraint firstItem="vFu-BD-kb1" firstAttribute="top" secondItem="iFC-bX-sEf" secondAttribute="bottom" constant="38" id="MGG-Cm-G1m"/>
-                            <constraint firstItem="c4z-5Y-2Lb" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="Ont-5i-DfB"/>
+                            <constraint firstItem="c4z-5Y-2Lb" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="30" id="Ont-5i-DfB"/>
                             <constraint firstItem="9CA-fU-zeU" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="PNy-7Y-l05"/>
                             <constraint firstItem="w1g-hz-tcZ" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="Py2-lX-ZCf"/>
-                            <constraint firstItem="9CA-fU-zeU" firstAttribute="top" secondItem="7rh-XN-zKQ" secondAttribute="bottom" constant="70" id="SuQ-pC-ZYk"/>
-                            <constraint firstItem="o5U-mj-BeW" firstAttribute="top" secondItem="Vij-GT-Wx6" secondAttribute="top" constant="230" id="VBV-jw-sHn"/>
+                            <constraint firstItem="9CA-fU-zeU" firstAttribute="top" secondItem="7rh-XN-zKQ" secondAttribute="bottom" constant="130" id="SuQ-pC-ZYk"/>
+                            <constraint firstItem="o5U-mj-BeW" firstAttribute="top" secondItem="Vij-GT-Wx6" secondAttribute="top" constant="270" id="VBV-jw-sHn"/>
                             <constraint firstItem="9CA-fU-zeU" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="ZUi-k0-TpA"/>
-                            <constraint firstItem="tKh-fU-GUe" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="f2r-K2-LLG"/>
+                            <constraint firstItem="tKh-fU-GUe" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="30" id="f2r-K2-LLG"/>
                             <constraint firstItem="c4z-5Y-2Lb" firstAttribute="top" secondItem="tKh-fU-GUe" secondAttribute="bottom" constant="38" id="gFq-Zb-DK9"/>
                             <constraint firstItem="QTz-5S-OEd" firstAttribute="top" secondItem="vFu-BD-kb1" secondAttribute="bottom" constant="10" id="hXr-LU-UBz"/>
                             <constraint firstItem="tKh-fU-GUe" firstAttribute="top" secondItem="o5U-mj-BeW" secondAttribute="bottom" constant="15" id="hk0-ZY-OxO"/>
-                            <constraint firstItem="QTz-5S-OEd" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="20" id="hsn-V0-tCX"/>
-                            <constraint firstItem="q02-FN-v2f" firstAttribute="top" secondItem="Vij-GT-Wx6" secondAttribute="top" constant="18" id="ka9-0E-Wkm"/>
+                            <constraint firstItem="QTz-5S-OEd" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="30" id="hsn-V0-tCX"/>
+                            <constraint firstItem="q02-FN-v2f" firstAttribute="top" secondItem="Vij-GT-Wx6" secondAttribute="top" constant="50" id="ka9-0E-Wkm"/>
                             <constraint firstItem="w1g-hz-tcZ" firstAttribute="top" secondItem="xes-YO-4tp" secondAttribute="bottom" constant="20" id="o3I-xe-nC5"/>
                             <constraint firstItem="xes-YO-4tp" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="qma-in-6BA"/>
-                            <constraint firstItem="Vij-GT-Wx6" firstAttribute="trailing" secondItem="7rh-XN-zKQ" secondAttribute="trailing" constant="20" id="tlv-FX-jRP"/>
+                            <constraint firstItem="Vij-GT-Wx6" firstAttribute="trailing" secondItem="7rh-XN-zKQ" secondAttribute="trailing" constant="35" id="tlv-FX-jRP"/>
                             <constraint firstItem="q02-FN-v2f" firstAttribute="centerX" secondItem="gPy-Nq-9kM" secondAttribute="centerX" id="vRw-4Q-qd7"/>
                             <constraint firstItem="iFC-bX-sEf" firstAttribute="top" secondItem="c4z-5Y-2Lb" secondAttribute="bottom" constant="15" id="w9t-KQ-vZ7"/>
                         </constraints>
