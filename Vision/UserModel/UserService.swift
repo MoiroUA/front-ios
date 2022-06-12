@@ -91,11 +91,11 @@ extension UserService: TargetType {
     }
     var headers: [String: String]? {
         let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-      return ["Authorization": "Token \(accessToken!)"]
+        return ["Authorization": "Token \(accessToken!)"]
     }
     
     
-    
+//    
 //    var headers: [String : String]? {
 //        return ["Content-Type" : "application/json"]
 //    }
