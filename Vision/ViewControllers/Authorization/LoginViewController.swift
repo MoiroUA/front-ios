@@ -54,6 +54,7 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let response):
                 let json = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as? NSDictionary
+                print(json)
                 if let parseJSON = json {
                     let accessToken = parseJSON["token"] as? String
                     print("accessToken: \(String(describing: accessToken))")
