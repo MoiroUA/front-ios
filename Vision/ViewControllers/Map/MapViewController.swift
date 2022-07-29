@@ -70,7 +70,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         rect1.add(CLLocationCoordinate2D(latitude: 49.8446458, longitude: 23.9528575))
         rect1.add(CLLocationCoordinate2D(latitude: 49.8413801, longitude: 23.9613548))
         rect1.add(CLLocationCoordinate2D(latitude: 49.8420443, longitude: 23.9677062))
-        // MARK: UISceneSession Lifecycle
+        
         rect2.add(CLLocationCoordinate2D(latitude: 49.8205454, longitude: 23.9688754))
         rect2.add(CLLocationCoordinate2D(latitude: 49.8213761, longitude: 23.9683604))
         rect2.add(CLLocationCoordinate2D(latitude: 49.8227051, longitude: 23.9668154))
@@ -161,6 +161,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         rect4.add(CLLocationCoordinate2D(latitude: 49.8286345, longitude: 24.012689))
         rect4.add(CLLocationCoordinate2D(latitude: 49.8276933, longitude: 24.0118307))
         rect4.add(CLLocationCoordinate2D(latitude: 49.8266413, longitude: 24.0106719))
+        
         rect5.add(CLLocationCoordinate2D(latitude: 49.8557194, longitude: 24.0454034))
         rect5.add(CLLocationCoordinate2D(latitude: 49.8550553, longitude: 24.0449743))
         rect5.add(CLLocationCoordinate2D(latitude: 49.854336, longitude: 24.043601))
@@ -201,6 +202,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         rect5.add(CLLocationCoordinate2D(latitude: 49.8621933, longitude: 24.0508966))
         rect5.add(CLLocationCoordinate2D(latitude: 49.8584308, longitude: 24.0477208))
         rect5.add(CLLocationCoordinate2D(latitude: 49.8557194, longitude: 24.0454034))
+        
         rect6.add(CLLocationCoordinate2D(latitude: 49.8289846, longitude: 24.0454892))
         rect6.add(CLLocationCoordinate2D(latitude: 49.8305348, longitude: 24.0484933))
         rect6.add(CLLocationCoordinate2D(latitude: 49.8297043, longitude: 24.0509824))
@@ -231,22 +233,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         rect7.add(CLLocationCoordinate2D(latitude: 49.8547487, longitude: 24.0144751))
         rect7.add(CLLocationCoordinate2D(latitude: 49.8552467, longitude: 24.0166637))
         rect7.add(CLLocationCoordinate2D(latitude: 49.8559661, longitude: 24.0194532))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8567685, longitude: 24.0215561))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8585115, longitude: 24.0206549))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8601715, longitude: 24.0197536))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8618314, longitude: 24.0189382))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8631592, longitude: 24.0182516))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8647084, longitude: 24.0174791))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8657319, longitude: 24.0167496))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8666171, longitude: 24.0161917))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8672257, longitude: 24.0157196))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8663128, longitude: 24.014003))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8656489, longitude: 24.0125009))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8652617, longitude: 24.0105268))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8647084, longitude: 24.007909))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8640445, longitude: 24.0067503))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8628273, longitude: 24.0070507))
-        rect8.add(CLLocationCoordinate2D(latitude: 49.8614994, longitude: 24.0079519))
+      
         rect9.add(CLLocationCoordinate2D(latitude: 49.8209987, longitude: 24.0558456))
         rect9.add(CLLocationCoordinate2D(latitude: 49.8199743, longitude: 24.0564893))
         rect9.add(CLLocationCoordinate2D(latitude: 49.8191713, longitude: 24.0572189))
@@ -272,6 +259,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         rect9.add(CLLocationCoordinate2D(latitude: 49.8226046, longitude: 24.0583776))
         rect9.add(CLLocationCoordinate2D(latitude: 49.8218017, longitude: 24.0578197))
         rect9.add(CLLocationCoordinate2D(latitude: 49.8209987, longitude: 24.0558456))
+        
         rect10.add(CLLocationCoordinate2D(latitude: 49.8403688, longitude: 24.0909849))
         rect10.add(CLLocationCoordinate2D(latitude: 49.8387654, longitude: 24.0927123))
         rect10.add(CLLocationCoordinate2D(latitude: 49.8383502, longitude: 24.0935706))
@@ -759,130 +747,130 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         // Create the polygon, and assign it to the map.
         let polygon = GMSPolygon(path: rect1)
-        polygon.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2);
-        polygon.strokeColor = .black
-        polygon.strokeWidth = 1.5
+        polygon.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3);
+        polygon.strokeColor = .yellow
+        polygon.strokeWidth = 1
         polygon.map = mapView
         
         let polygon2 = GMSPolygon(path: rect2)
         polygon2.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon2.strokeColor = .black
-        polygon2.strokeWidth = 1.5
+        polygon2.strokeColor = .yellow
+        polygon2.strokeWidth = 1
         polygon2.map = mapView
         
         let polygon3 = GMSPolygon(path: rect3)
-        polygon3.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2);
-        polygon3.strokeColor = .black
-        polygon3.strokeWidth = 1.5
+        polygon3.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3);
+        polygon3.strokeColor = .red
+        polygon3.strokeWidth = 1
         polygon3.map = mapView
         
         let polygon4 = GMSPolygon(path: rect4)
         polygon4.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon4.strokeColor = .black
-        polygon4.strokeWidth = 1.5
+        polygon4.strokeColor = .yellow
+        polygon4.strokeWidth = 1
         polygon4.map = mapView
         
         let polygon6 = GMSPolygon(path: rect6)
         polygon6.fillColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.2);
-        polygon6.strokeColor = .black
-        polygon6.strokeWidth = 1.5
+        polygon6.strokeColor = .yellow
+        polygon6.strokeWidth = 1
         polygon6.map = mapView
         
-        let polygon8 = GMSPolygon(path: rect8)
-        polygon8.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon8.strokeColor = .black
-        polygon8.strokeWidth = 1.5
-        polygon8.map = mapView
+//        let polygon8 = GMSPolygon(path: rect8)
+//        polygon8.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
+//        polygon8.strokeColor = .yellow
+//        polygon8.strokeWidth = 1
+//        polygon8.map = mapView
         
         let polygon9 = GMSPolygon(path: rect9)
         polygon9.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon9.strokeColor = .black
-        polygon9.strokeWidth = 1.5
+        polygon9.strokeColor = .yellow
+        polygon9.strokeWidth = 1
         polygon9.map = mapView
         
         let polygon10 = GMSPolygon(path: rect10)
         polygon10.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon10.strokeColor = .black
-        polygon10.strokeWidth = 1.5
+        polygon10.strokeColor = .yellow
+        polygon10.strokeWidth = 1
         polygon10.map = mapView
         
         let polygon11 = GMSPolygon(path: rect11)
         polygon11.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon11.strokeColor = .black
-        polygon11.strokeWidth = 1.5
+        polygon11.strokeColor = .yellow
+        polygon11.strokeWidth = 1
         polygon11.map = mapView
         
         let polygon12 = GMSPolygon(path: rect12)
         polygon12.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon12.strokeColor = .black
-        polygon12.strokeWidth = 1.5
+        polygon12.strokeColor = .yellow
+        polygon12.strokeWidth = 1
         polygon12.map = mapView
         
         let polygon13 = GMSPolygon(path: rect13)
         polygon13.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon13.strokeColor = .black
-        polygon13.strokeWidth = 1.5
+        polygon13.strokeColor = .yellow
+        polygon13.strokeWidth = 1
         polygon13.map = mapView
         
         let polygon14 = GMSPolygon(path: rect14)
         polygon14.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon14.strokeColor = .black
-        polygon14.strokeWidth = 1.5
+        polygon14.strokeColor = .yellow
+        polygon14.strokeWidth = 1
         polygon14.map = mapView
         
         let polygon15 = GMSPolygon(path: rect15)
-        polygon15.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2);
-        polygon15.strokeColor = .black
-        polygon15.strokeWidth = 1.5
+        polygon15.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3);
+        polygon15.strokeColor = .red
+        polygon15.strokeWidth = 1
         polygon15.map = mapView
         
         
         let polygon16 = GMSPolygon(path: rect16)
-        polygon16.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2);
-        polygon16.strokeColor = .black
-        polygon16.strokeWidth = 1.5
+        polygon16.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3);
+        polygon16.strokeColor = .red
+        polygon16.strokeWidth = 1
         polygon16.map = mapView
         
         let polygon17 = GMSPolygon(path: rect17)
         polygon17.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon17.strokeColor = .black
-        polygon17.strokeWidth = 1.5
+        polygon17.strokeColor = .yellow
+        polygon17.strokeWidth = 1
         polygon17.map = mapView
         
         let polygon18 = GMSPolygon(path: rect18)
-        polygon18.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2);
-        polygon18.strokeColor = .black
-        polygon18.strokeWidth = 1.5
+        polygon18.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3);
+        polygon18.strokeColor = .red
+        polygon18.strokeWidth = 1
         polygon18.map = mapView
         
         let polygon19 = GMSPolygon(path: rect19)
         polygon19.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon19.strokeColor = .black
-        polygon19.strokeWidth = 1.5
+        polygon19.strokeColor = .yellow
+        polygon19.strokeWidth = 1
         polygon19.map = mapView
        
         let polygon20 = GMSPolygon(path: rect20)
         polygon20.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon20.strokeColor = .black
-        polygon20.strokeWidth = 1.5
+        polygon20.strokeColor = .yellow
+        polygon20.strokeWidth = 1
         polygon20.map = mapView
         
         let polygon21 = GMSPolygon(path: rect21)
         polygon21.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon21.strokeColor = .black
-        polygon21.strokeWidth = 1.5
+        polygon21.strokeColor = .yellow
+        polygon21.strokeWidth = 1
         polygon21.map = mapView
         
         let polygon22 = GMSPolygon(path: rect22)
         polygon22.fillColor = UIColor(red: 1, green: 1, blue: 0, alpha: 0.3);
-        polygon22.strokeColor = .black
-        polygon22.strokeWidth = 1.5
+        polygon22.strokeColor = .yellow
+        polygon22.strokeWidth = 1
         polygon22.map = mapView
         
         let polygon23 = GMSPolygon(path: rect23)
-        polygon23.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.2);
-        polygon23.strokeColor = .black
-        polygon23.strokeWidth = 1.5
+        polygon23.fillColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.3);
+        polygon23.strokeColor = .red
+        polygon23.strokeWidth = 1
         polygon23.map = mapView
         
         

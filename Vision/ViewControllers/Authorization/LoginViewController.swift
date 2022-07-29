@@ -77,7 +77,7 @@ class LoginViewController: UIViewController {
         
         
     }
-    
+    // MARK: - TransitionToMain
     func pushMain() {
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene

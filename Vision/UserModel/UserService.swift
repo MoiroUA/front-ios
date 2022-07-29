@@ -8,6 +8,7 @@
 import Foundation
 import Moya
 import SwiftKeychainWrapper
+import UIKit
 enum UserService {
     case createUser(first_name: String, last_name: String, email: String, password: String)
     case loginUser(username: String, password: String)
@@ -89,15 +90,27 @@ extension UserService: TargetType {
             ], encoding: JSONEncoding.default)
         }
     }
+    
     var headers: [String: String]? {
-        let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
-        return ["Authorization": "Token \(accessToken!)"]
+        
+        switch self {
+        case .createUser(let first_name, let last_name, let email, let password):
+            return ["Content-Type" : "application/json"]
+        case .loginUser(let username, let password):
+            let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+            return ["Content-Type" : "application/json"]
+        case .readUsers:
+            let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+            return ["Authorization": "Token \(accessToken!)"]
+        case .updateUser(let email, let password, let phoneNumber):
+            let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+            return ["Authorization": "Token \(accessToken!)"]
+        case .deleteUser(let email):
+            let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+            return ["Authorization": "Token \(accessToken!)"]
+        }
+   
     }
-    
-    
-//    
-//    var headers: [String : String]? {
-//        return ["Content-Type" : "application/json"]
-//    }
+
     
 }

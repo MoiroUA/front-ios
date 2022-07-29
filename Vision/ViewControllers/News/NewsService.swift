@@ -5,7 +5,6 @@
 //  Created by Denys on 09.06.2022.
 //
 
-
 import Foundation
 import UIKit
 
@@ -28,6 +27,5 @@ final class NewsService: NSObject {
         dataTask.resume()
     }
 
-
-
 }
+

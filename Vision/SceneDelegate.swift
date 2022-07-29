@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         let accessToken: String? = KeychainWrapper.standard.string(forKey: "accessToken")
+        
         if accessToken != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let homePage = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
