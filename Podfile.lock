@@ -5,6 +5,7 @@ PODS:
   - GoogleMaps/Base (6.2.1)
   - GoogleMaps/Maps (6.2.1):
     - GoogleMaps/Base
+  - GooglePlaces (7.0.0)
   - Kingfisher (7.2.3)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
@@ -14,6 +15,7 @@ PODS:
 
 DEPENDENCIES:
   - GoogleMaps (~> 6.2)
+  - GooglePlaces (= 7.0.0)
   - Kingfisher (~> 7.0)
   - Moya (~> 15.0)
   - SwiftKeychainWrapper (~> 4.0)
@@ -22,6 +24,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - GoogleMaps
+    - GooglePlaces
     - Kingfisher
     - Moya
     - SwiftKeychainWrapper
@@ -29,10 +32,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   GoogleMaps: 20d7b12be49a14287f797e88e0e31bc4156aaeb4
+  GooglePlaces: 8dba710bed6160a2e4b85e84aaafdbcc0b4010d8
   Kingfisher: 8c2cbe0c11ea4d481542895112682a99e058468e
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: a43f2244aa7e0798817e9c9dae2b1a7f9448a110
+PODFILE CHECKSUM: c66ce4bff199f79db668bf41ac33987348d16fbc
 
 COCOAPODS: 1.11.3

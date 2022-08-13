@@ -11,27 +11,51 @@ import CoreLocation
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet var homeView: UIView!
+    
     
     let manager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let backButton = UIBarButtonItem(
+              title: "Карта",
+              style: UIBarButtonItem.Style.plain,
+              target: nil,
+              action: nil
+        );
+
+        self.navigationController!.navigationBar.topItem!.backBarButtonItem = backButton;
+    
+        searchBt.layer.cornerRadius = 18
+        searchBt.layer.shadowColor = UIColor.black.cgColor
+        searchBt.layer.shadowOpacity = 0.2
+        searchBt.layer.shadowOffset = .zero
+        searchBt.layer.shadowRadius = 2
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
         GMSServices.provideAPIKey("AIzaSyBHxObHd1AnPlMI6jw3d3D8QkkBS5SZt8Y")
-    
+        
     }
+    
+    @IBAction func searchButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "searchResultsvc") as! SearchResultsViewController
+        
+        navigationController!.pushViewController(vc, animated: false)
+       
+    }
+    @IBOutlet var searchBt: UIButton!
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
         
         
         let coordinate = location.coordinate
         let camera = GMSCameraPosition.camera(withLatitude: 49.8397, longitude: 24.0297, zoom: 13.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-        view.addSubview(mapView)
+        let mapView = GMSMapView.map(withFrame: self.homeView.frame, camera: camera)
+        homeView.addSubview(mapView)
         // Create a rectangular path
         let rect1 = GMSMutablePath()
         let rect2 = GMSMutablePath()

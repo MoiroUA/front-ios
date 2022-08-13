@@ -28,6 +28,10 @@ THE SOFTWARE.
 
 Copyright 2022 Google
 
+## GooglePlaces
+
+Copyright 2022 Google
+
 ## Kingfisher
 
 The MIT License (MIT)

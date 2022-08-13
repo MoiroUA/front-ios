@@ -7,7 +7,8 @@
 
 import UIKit
 import SwiftKeychainWrapper
-
+import GooglePlaces
+import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        GMSPlacesClient.provideAPIKey("AIzaSyB_gelT1wEJJaHsJdH8NwCUqaK61FhnJ0I")
         
         return true
     }
@@ -33,7 +34,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    lazy var peristentContainer: NSPersistentContainer = {
+            let container = NSPersistentContainer(name: "RecentlySearchedPlaceModel")
+            container.loadPersistentStores (completionHandler: { desc, error in
+                if let error = error {
+                    print("Failed to load the data \(error.localizedDescription )")
+                }
+                
+                
+            })
+            return container
+        }()
 
 }
 
