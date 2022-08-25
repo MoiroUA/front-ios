@@ -86,6 +86,7 @@ extension SearchResultsViewController: UITableViewDelegate {
         self.getAllItems()
         cell.recentLb.text = historyResults.reversed()[indexPath.row].name
         cell.recentImage.image = UIImage(systemName: "clock.arrow.circlepath")
+        
         return cell
         
         

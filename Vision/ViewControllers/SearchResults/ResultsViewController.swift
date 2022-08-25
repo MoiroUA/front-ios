@@ -56,8 +56,9 @@ extension ResultsViewController: UITableViewDelegate {
         GooglePlacesManager.shared.resolveLocation(for: place) { [weak self]result in
             switch result {
             case .success(let coordinate):
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self?.delegate?.didTapPlace(with: coordinate)
+                    self!.signUP()
                 }
                 
             case .failure(let error):
@@ -65,6 +66,15 @@ extension ResultsViewController: UITableViewDelegate {
             }
         }
         tableView.isHidden = true
+    }
+    func signUP() {
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        let window = windowScene?.windows.first
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homePage = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
+        window?.rootViewController = homePage
+        window?.makeKeyAndVisible()
     }
 }
 

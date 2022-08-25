@@ -9,11 +9,33 @@ import UIKit
 import GoogleMaps
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+ 
+
+
+
+class MapViewController: UIViewController, CLLocationManagerDelegate, ResultsViewControllerDelegate {
     
     @IBOutlet var homeView: UIView!
     
-    
+    func didTapPlace(with coordinates: CLLocationCoordinate2D) {
+        // Remove all pinned
+        
+        // Add a map pin
+//        let camera = GMSCameraPosition.camera(withLatitude: coordinates.latitude, longitude: coordinates.longitude, zoom: 18.0)
+//        let mapView = GMSMapView.map(withFrame: self.homeView.frame, camera: camera)
+//        let marker = GMSMarker()
+//        marker.position = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+//        marker.map = mapView
+//
+        
+      
+        let camera = GMSCameraPosition.camera(withLatitude: coordinates.latitude, longitude: coordinates.longitude, zoom: 13.0)
+        let mapView = GMSMapView.map(withFrame: self.homeView.frame, camera: camera)
+        homeView.addSubview(mapView)
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
+        marker.map = mapView
+    }
     let manager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -33,6 +55,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         searchBt.layer.shadowOffset = .zero
         searchBt.layer.shadowRadius = 2
         manager.delegate = self
+        
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
