@@ -17,27 +17,27 @@ class MyAccountViewController: UIViewController {
     @IBAction func logOutButtonTapped(_ sender: Any) {
         signOUT()
     }
-    let userProvider =  MoyaProvider<UserService>()
+//    let userProvider =  MoyaProvider<UserService>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userProvider.request(.readUsers){ result in
-            switch result {
-            case .success(let response):
-                let json = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as? NSDictionary
-                if let parseJSON = json {
-                    let first_name = parseJSON["first_name"] as? String
-                    let last_name = parseJSON["last_name"] as? String
-                    let email = parseJSON["email"] as? String
-                    self.email.text = email
-                    self.name.text = first_name! + " " + last_name!
-                }
-            case .failure(let error):
-                print(error)
-                
-            }
-        }
+//        userProvider.request(.readUsers){ result in
+//            switch result {
+//            case .success(let response):
+//                let json = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as? NSDictionary
+//                if let parseJSON = json {
+//                    let first_name = parseJSON["first_name"] as? String
+//                    let last_name = parseJSON["last_name"] as? String
+//                    let email = parseJSON["email"] as? String
+//                    self.email.text = email
+//                    self.name.text = first_name! + " " + last_name!
+//                }
+//            case .failure(let error):
+//                print(error)
+//                
+//            }
+//        }
         
     }
     // MARK: - signOUT

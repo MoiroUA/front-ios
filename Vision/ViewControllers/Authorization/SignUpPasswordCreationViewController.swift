@@ -1,21 +1,21 @@
 //
-//  SignUpViewController.swift
-//  RegistrationMenu
+//  SignUpPasswordCreationViewController.swift
+//  Vision
 //
-//  Created by Denys on 07.05.2022.
+//  Created by Denys on 25.08.2022.
 //
 
 import UIKit
 import Moya
-class SignUpViewController: UIViewController {
-    @IBOutlet var emailTextField: RoundedTextField!
+class SignUpPasswordCreationViewController: UIViewController {
     @IBOutlet var confirmedPasswordTextField: RoundedTextField!
     @IBOutlet var passwordTextField: RoundedTextField!
-    @IBOutlet var lastNameTextField: RoundedTextField!
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet var signIn: UIButton!
     @IBOutlet var signUp: RoundedButton!
-    @IBOutlet var firstNameTextField: RoundedTextField!
+    var firstName: String!
+    var lastName: String!
+    var email: String!
     let textColored: TextColored = TextColored()
     //let userProvider =  MoyaProvider<UserService>()
     override func viewDidLoad() {
@@ -28,6 +28,7 @@ class SignUpViewController: UIViewController {
         
     }
     
+
     @IBAction func signUpTapped(_ sender: Any) {
         
         // Validate the fields
@@ -41,7 +42,7 @@ class SignUpViewController: UIViewController {
             // create the user
             // Transmit to main screen
             
-//            userProvider.request(.createUser(first_name: firstNameTextField.text!, last_name: lastNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)){ result in
+//            userProvider.request(.createUser(first_name: firstName!, last_name: lastName!, email: email!, password: passwordTextField.text!)){ result in
 //                
 //                switch result {
 //                case .success(let response):
@@ -59,24 +60,32 @@ class SignUpViewController: UIViewController {
             
             
         }
-        
-        
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
     // MARK: - valideteFields
     // Check the fields and validate that the data is correct. If everything ok this methods returns nil. Otherwise it returns the error message
     func validateFields() -> String? {
         
         //check that all fields are filled in
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        if email == "" ||
+            lastName == "" ||
+            email == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             confirmedPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill in all fields"
         }
         
         // check if the email is right
-        let cleanedEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanedEmail = email!
         
         if  Utilities.isValidEmail(cleanedEmail) == false {
             //the email isn't right
@@ -97,25 +106,19 @@ class SignUpViewController: UIViewController {
         }
         return nil
     }
-    
-    // MARK: - sign up func
-    func signUP() {
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScene = scenes.first as? UIWindowScene
-        let window = windowScene?.windows.first
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homePage = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
-        window?.rootViewController = homePage
-        window?.makeKeyAndVisible()
-    }
-    
-    @IBAction func signInTapped(_ sender: Any) {
-        
-    }
-    // MARK: - show Error
-    func showError(_ message: String) {
-        errorLabel.text = message
-        errorLabel.alpha = 1
-    }
-    
+// MARK: - sign up func
+func signUP() {
+    let scenes = UIApplication.shared.connectedScenes
+    let windowScene = scenes.first as? UIWindowScene
+    let window = windowScene?.windows.first
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let homePage = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
+    window?.rootViewController = homePage
+}
+// MARK: - show Error
+func showError(_ message: String) {
+    errorLabel.text = message
+    errorLabel.alpha = 1
+}
+
 }

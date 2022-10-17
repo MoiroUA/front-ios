@@ -40,6 +40,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, ResultsVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GMSServices.provideAPIKey("AIzaSyBHxObHd1AnPlMI6jw3d3D8QkkBS5SZt8Y")
+        
         let backButton = UIBarButtonItem(
               title: "Карта",
               style: UIBarButtonItem.Style.plain,
@@ -59,7 +61,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, ResultsVie
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        GMSServices.provideAPIKey("AIzaSyBHxObHd1AnPlMI6jw3d3D8QkkBS5SZt8Y")
+       
         
     }
     

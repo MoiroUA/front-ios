@@ -25,6 +25,8 @@
 		9A3FCD912831D607003FAE84 /* VisionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3FCD902831D607003FAE84 /* VisionUITestsLaunchTests.swift */; };
 		9A452060289F378A00553ADA /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A45205F289F378A00553ADA /* OTPViewController.swift */; };
 		9A558B8F2894500C00A6A32F /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A558B8E2894500C00A6A32F /* SearchResultsViewController.swift */; };
+		9A66F77E28B7CE230042DC7E /* SignUpNameEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66F77D28B7CE230042DC7E /* SignUpNameEmailViewController.swift */; };
+		9A66F78028B7CE420042DC7E /* SignUpPasswordCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66F77F28B7CE420042DC7E /* SignUpPasswordCreationViewController.swift */; };
 		9A8938B22834C66B0097C827 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8938B12834C66B0097C827 /* Colors.xcassets */; };
 		9A8A2D53289CDE4500AFD22C /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A2D52289CDE4500AFD22C /* GooglePlacesManager.swift */; };
 		9AAAB20D2848F9CD009E950F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAB20C2848F9CD009E950F /* UserService.swift */; };
@@ -91,6 +93,8 @@
 		9A3FCD902831D607003FAE84 /* VisionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A45205F289F378A00553ADA /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		9A558B8E2894500C00A6A32F /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		9A66F77D28B7CE230042DC7E /* SignUpNameEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameEmailViewController.swift; sourceTree = "<group>"; };
+		9A66F77F28B7CE420042DC7E /* SignUpPasswordCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordCreationViewController.swift; sourceTree = "<group>"; };
 		9A8938B12834C66B0097C827 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9A8A2D52289CDE4500AFD22C /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
 		9AAAB20C2848F9CD009E950F /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 		9A0F5A5D28326210000C06F0 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				9A66F77D28B7CE230042DC7E /* SignUpNameEmailViewController.swift */,
+				9A66F77F28B7CE420042DC7E /* SignUpPasswordCreationViewController.swift */,
 				9A45205E289F376400553ADA /* PasswordReset */,
 				9AF0143D2831D8A60059EDA8 /* SignUpViewController.swift */,
 				9AF0143B2831D8A10059EDA8 /* LoginViewController.swift */,
@@ -640,6 +646,7 @@
 				9A2825802851EFB800F1B78F /* NewsService.swift in Sources */,
 				9AB503B4283F98D100411700 /* Utilities.swift in Sources */,
 				9AF1273E284E643500A764DB /* NewsTableViewCell.swift in Sources */,
+				9A66F77E28B7CE230042DC7E /* SignUpNameEmailViewController.swift in Sources */,
 				9A2FAA6A28A012AB005D40AC /* PasswordResetViewController.swift in Sources */,
 				9A8A2D53289CDE4500AFD22C /* GooglePlacesManager.swift in Sources */,
 				9A2825822851F36700F1B78F /* Articles.swift in Sources */,
@@ -652,6 +659,7 @@
 				9AAAB20F2848F9D3009E950F /* User.swift in Sources */,
 				9AAAB20D2848F9CD009E950F /* UserService.swift in Sources */,
 				9A082F2828A1A0E3004107C3 /* RecentlySearchedPlaceModel.xcdatamodeld in Sources */,
+				9A66F78028B7CE420042DC7E /* SignUpPasswordCreationViewController.swift in Sources */,
 				9AF0143A2831D89D0059EDA8 /* RoundedButton.swift in Sources */,
 				9A3FCD6E2831D605003FAE84 /* AppDelegate.swift in Sources */,
 				9AC3EC9F28A09A1900ABD4D0 /* RecentRequestsCell.swift in Sources */,
@@ -844,6 +852,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -873,6 +882,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
