@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     let textColored: TextColored = TextColored()
     @IBOutlet var signUp: UIButton!
     @IBOutlet var signIn: RoundedButton!
-    let userProvider =  MoyaProvider<UserService>()
+//    let userProvider =  MoyaProvider<UserService>()
     
     
     override func viewDidLoad() {
@@ -50,30 +50,30 @@ class LoginViewController: UIViewController {
     
     func login () {
         // Sign in method
-        userProvider.request(.loginUser(username: email.text!, password: password.text!)){ result in
-            switch result {
-            case .success(let response):
-                let json = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as? NSDictionary
-                print(json)
-                if let parseJSON = json {
-                    let accessToken = parseJSON["token"] as? String
-                    print("accessToken: \(String(describing: accessToken))")
-                    if accessToken == nil {
-                        print("AccessToken is not true")
-                        return
-                    }
-                    let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "accessToken")
-                    DispatchQueue.main.async {
-                        self.pushMain()
-                    }
-                }
-                
-                
-            case .failure(let error):
-                print(error)
-                
-            }
-        }
+//        userProvider.request(.loginUser(username: email.text!, password: password.text!)){ result in
+//            switch result {
+//            case .success(let response):
+//                let json = try! JSONSerialization.jsonObject(with: response.data, options: .mutableContainers) as? NSDictionary
+//                print(json)
+//                if let parseJSON = json {
+//                    let accessToken = parseJSON["token"] as? String
+//                    print("accessToken: \(String(describing: accessToken))")
+//                    if accessToken == nil {
+//                        print("AccessToken is not true")
+//                        return
+//                    }
+//                    let saveAccessToken: Bool = KeychainWrapper.standard.set(accessToken!, forKey: "accessToken")
+//                    DispatchQueue.main.async {
+//                        self.pushMain()
+//                    }
+//                }
+//                
+//                
+//            case .failure(let error):
+//                print(error)
+//                
+//            }
+//        }
         
         
     }
