@@ -89,7 +89,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" name="AppPistachio"/>
+                                <color key="backgroundColor" name="AppLigthBlue"/>
                                 <constraints>
                                     <constraint firstItem="fLv-4C-H8B" firstAttribute="leading" secondItem="SGE-Aa-beE" secondAttribute="leading" constant="55" id="0d8-e8-vr8"/>
                                     <constraint firstItem="NrF-q6-mM7" firstAttribute="leading" secondItem="SGE-Aa-beE" secondAttribute="leading" constant="38" id="3ei-1b-Bft"/>
@@ -218,7 +218,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="AppPistachio"/>
+                                <color key="backgroundColor" name="AppLigthBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="cGE-EN-wPQ" secondAttribute="trailing" constant="50" id="2xO-KV-EdP"/>
                                     <constraint firstItem="cGE-EN-wPQ" firstAttribute="top" secondItem="7YS-9X-BUo" secondAttribute="bottom" constant="25" id="3ul-XF-MC7"/>
@@ -343,7 +343,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="AppPistachio"/>
+                                <color key="backgroundColor" name="AppLigthBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="6dz-D4-0l6" secondAttribute="bottom" constant="20" id="6cT-ZY-r6N"/>
                                     <constraint firstItem="yYb-cy-hQ7" firstAttribute="leading" secondItem="Ma1-S9-UDR" secondAttribute="leading" constant="40" id="6hd-IJ-A9X"/>
@@ -532,7 +532,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-yI-5ZK">
                                 <rect key="frame" x="0.0" y="158" width="414" height="655"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.79785102610000003" green="0.94241011139999997" blue="0.99873620269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="newsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" rowHeight="115" id="cHZ-gb-yk0" customClass="NewsTableViewCell" customModule="Vision" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="115"/>
@@ -560,7 +560,7 @@
                                                             <rect key="frame" x="299" y="13" width="53" height="69"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="AppLightGray"/>
+                                                    <color key="backgroundColor" name="AppWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="RpP-z9-Bok" secondAttribute="trailing" constant="76" id="2lE-VP-Jgj"/>
                                                         <constraint firstAttribute="trailing" secondItem="VBr-04-Vv3" secondAttribute="trailing" constant="18" id="7Hc-WU-6HF"/>
@@ -576,6 +576,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.79785102610000003" green="0.94241011139999997" blue="0.99873620269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="9Qn-A9-aKY" secondAttribute="bottom" constant="15" id="Qxy-xv-q8a"/>
                                                 <constraint firstItem="9Qn-A9-aKY" firstAttribute="leading" secondItem="gCA-J4-kmV" secondAttribute="leading" constant="22" id="X6k-jp-QDU"/>
@@ -594,7 +595,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7fq-0A-jio"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.79785102610000003" green="0.94241011139999997" blue="0.99873620269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hcJ-eP-3rz" firstAttribute="centerX" secondItem="4Yb-Sl-6jd" secondAttribute="centerX" id="1Fl-km-7o2"/>
                             <constraint firstItem="hcJ-eP-3rz" firstAttribute="top" secondItem="7fq-0A-jio" secondAttribute="top" constant="50" id="Esw-ox-GWl"/>
@@ -609,6 +610,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="pb7-yI-5ZK" id="fqH-1Q-twc"/>
+                        <outlet property="view" destination="4Yb-Sl-6jd" id="3E8-cl-NjH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U1s-9v-iQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -669,22 +671,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CA-fU-zeU">
-                                <rect key="frame" x="101" y="746.5" width="212" height="31.5"/>
+                                <rect key="frame" x="108.5" y="748.5" width="197" height="29.5"/>
                                 <color key="tintColor" red="0.99887412789999996" green="0.17488923670000001" blue="0.33298572900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Вийти з облікового запису">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logOutButtonTapped:" destination="K3W-co-Wyi" eventType="touchUpInside" id="Z6u-tJ-Drn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rh-XN-zKQ">
-                                <rect key="frame" x="232" y="589.5" width="147" height="27"/>
+                                <rect key="frame" x="271.5" y="596" width="107.5" height="22.5"/>
                                 <color key="tintColor" name="AppDarkGreen"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Редагувати інформацію">
-                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="7"/>
                                 </buttonConfiguration>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Група крові " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFu-BD-kb1">
@@ -701,7 +703,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vij-GT-Wx6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.79785102610000003" green="0.94241011139999997" blue="0.99873620269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iFC-bX-sEf" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="30" id="41y-hZ-erT"/>
                             <constraint firstItem="vFu-BD-kb1" firstAttribute="leading" secondItem="Vij-GT-Wx6" secondAttribute="leading" constant="30" id="4ej-6f-4H1"/>
@@ -785,7 +787,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8d9-oy-Ifw"/>
-                        <color key="backgroundColor" name="AppPistachio"/>
+                        <color key="backgroundColor" name="AppLigthBlue"/>
                         <constraints>
                             <constraint firstItem="8d9-oy-Ifw" firstAttribute="trailing" secondItem="Pfx-1L-GEG" secondAttribute="trailing" constant="50" id="5t9-ZI-SHT"/>
                             <constraint firstItem="Dbl-5Y-S1E" firstAttribute="top" secondItem="QHd-5N-1NB" secondAttribute="bottom" constant="50" id="7e3-Lv-6xn"/>
@@ -899,7 +901,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="K7Q-KB-hF9"/>
-                        <color key="backgroundColor" name="AppPistachio"/>
+                        <color key="backgroundColor" name="AppLigthBlue"/>
                         <constraints>
                             <constraint firstItem="OcS-LG-aV7" firstAttribute="leading" secondItem="K7Q-KB-hF9" secondAttribute="leading" constant="40" id="16T-fi-sG2"/>
                             <constraint firstItem="kyF-OT-kaB" firstAttribute="leading" secondItem="K7Q-KB-hF9" secondAttribute="leading" constant="40" id="3P5-IF-Q4l"/>
@@ -1228,11 +1230,8 @@
         <namedColor name="AppGrey">
             <color red="0.59200000762939453" green="0.59200000762939453" blue="0.59200000762939453" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="AppLightGray">
-            <color red="0.90600001811981201" green="0.90600001811981201" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="AppPistachio">
-            <color red="0.85000002384185791" green="0.97500002384185791" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="AppLigthBlue">
+            <color red="0.67500001192092896" green="0.88200002908706665" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

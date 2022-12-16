@@ -12,6 +12,7 @@
 		74774F1FB82A012A92F1B2C0 /* Pods_VisionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23ACA1AADF075D6AD0F32B8F /* Pods_VisionTests.framework */; };
 		9A082F2828A1A0E3004107C3 /* RecentlySearchedPlaceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A082F2628A1A0E3004107C3 /* RecentlySearchedPlaceModel.xcdatamodeld */; };
 		9A082F2B28A1A2B6004107C3 /* RecentlySearchedPlacesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A082F2A28A1A2B6004107C3 /* RecentlySearchedPlacesController.swift */; };
+		9A0D4265294C3E66004043FD /* MapDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0D4264294C3E66004043FD /* MapDataModel.swift */; };
 		9A27CF7A28355D4F009D8074 /* TextColored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A27CF7928355D4F009D8074 /* TextColored.swift */; };
 		9A2825802851EFB800F1B78F /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A28257F2851EFB800F1B78F /* NewsService.swift */; };
 		9A2825822851F36700F1B78F /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2825812851F36700F1B78F /* Articles.swift */; };
@@ -29,6 +30,7 @@
 		9A66F78028B7CE420042DC7E /* SignUpPasswordCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66F77F28B7CE420042DC7E /* SignUpPasswordCreationViewController.swift */; };
 		9A8938B22834C66B0097C827 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A8938B12834C66B0097C827 /* Colors.xcassets */; };
 		9A8A2D53289CDE4500AFD22C /* GooglePlacesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8A2D52289CDE4500AFD22C /* GooglePlacesManager.swift */; };
+		9AA55063294C932500767361 /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA55062294C932500767361 /* MapService.swift */; };
 		9AAAB20D2848F9CD009E950F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAB20C2848F9CD009E950F /* UserService.swift */; };
 		9AAAB20F2848F9D3009E950F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAAB20E2848F9D3009E950F /* User.swift */; };
 		9AB503B4283F98D100411700 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB503B3283F98D100411700 /* Utilities.swift */; };
@@ -76,6 +78,7 @@
 		80CFF2EE04384E313DA96EC2 /* Pods-Vision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vision.debug.xcconfig"; path = "Target Support Files/Pods-Vision/Pods-Vision.debug.xcconfig"; sourceTree = "<group>"; };
 		9A082F2728A1A0E3004107C3 /* RecentlySearchedPlaceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RecentlySearchedPlaceModel.xcdatamodel; sourceTree = "<group>"; };
 		9A082F2A28A1A2B6004107C3 /* RecentlySearchedPlacesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlySearchedPlacesController.swift; sourceTree = "<group>"; };
+		9A0D4264294C3E66004043FD /* MapDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataModel.swift; sourceTree = "<group>"; };
 		9A27CF7928355D4F009D8074 /* TextColored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColored.swift; sourceTree = "<group>"; };
 		9A28257F2851EFB800F1B78F /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		9A2825812851F36700F1B78F /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
@@ -97,6 +100,7 @@
 		9A66F77F28B7CE420042DC7E /* SignUpPasswordCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPasswordCreationViewController.swift; sourceTree = "<group>"; };
 		9A8938B12834C66B0097C827 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9A8A2D52289CDE4500AFD22C /* GooglePlacesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesManager.swift; sourceTree = "<group>"; };
+		9AA55062294C932500767361 /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
 		9AAAB20C2848F9CD009E950F /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9AAAB20E2848F9D3009E950F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9AB503B3283F98D100411700 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -181,6 +185,14 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
+		9A0D4263294C3E40004043FD /* MapDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				9A0D4264294C3E66004043FD /* MapDataModel.swift */,
+			);
+			path = MapDataModel;
+			sourceTree = "<group>";
+		};
 		9A0F5A5D28326210000C06F0 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +240,7 @@
 		9A3FCD6C2831D605003FAE84 /* Vision */ = {
 			isa = PBXGroup;
 			children = (
+				9A0D4263294C3E40004043FD /* MapDataModel */,
 				9A3FCD6D2831D605003FAE84 /* AppDelegate.swift */,
 				9A3FCD6F2831D605003FAE84 /* SceneDelegate.swift */,
 				9A594E7E283C27FC000A19A9 /* ViewControllers */,
@@ -342,6 +355,7 @@
 			children = (
 				9AAAB20C2848F9CD009E950F /* UserService.swift */,
 				9AAAB20E2848F9D3009E950F /* User.swift */,
+				9AA55062294C932500767361 /* MapService.swift */,
 			);
 			path = UserModel;
 			sourceTree = "<group>";
@@ -647,6 +661,7 @@
 				9AB503B4283F98D100411700 /* Utilities.swift in Sources */,
 				9AF1273E284E643500A764DB /* NewsTableViewCell.swift in Sources */,
 				9A66F77E28B7CE230042DC7E /* SignUpNameEmailViewController.swift in Sources */,
+				9AA55063294C932500767361 /* MapService.swift in Sources */,
 				9A2FAA6A28A012AB005D40AC /* PasswordResetViewController.swift in Sources */,
 				9A8A2D53289CDE4500AFD22C /* GooglePlacesManager.swift in Sources */,
 				9A2825822851F36700F1B78F /* Articles.swift in Sources */,
@@ -664,6 +679,7 @@
 				9A3FCD6E2831D605003FAE84 /* AppDelegate.swift in Sources */,
 				9AC3EC9F28A09A1900ABD4D0 /* RecentRequestsCell.swift in Sources */,
 				9A558B8F2894500C00A6A32F /* SearchResultsViewController.swift in Sources */,
+				9A0D4265294C3E66004043FD /* MapDataModel.swift in Sources */,
 				9A3FCD702831D605003FAE84 /* SceneDelegate.swift in Sources */,
 				9AD1942E283F626D009091B7 /* MainTabBarViewController.swift in Sources */,
 				9A27CF7A28355D4F009D8074 /* TextColored.swift in Sources */,
@@ -847,6 +863,7 @@
 				DEVELOPMENT_TEAM = 7UWUYJ2WNQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vision/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow access to see your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -877,6 +894,7 @@
 				DEVELOPMENT_TEAM = 7UWUYJ2WNQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Vision/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Please allow access to see your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

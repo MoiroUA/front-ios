@@ -17,7 +17,7 @@ class SignUpPasswordCreationViewController: UIViewController {
     var lastName: String!
     var email: String!
     let textColored: TextColored = TextColored()
-    //let userProvider =  MoyaProvider<UserService>()
+   let userProvider =  MoyaProvider<UserService>()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,23 +42,17 @@ class SignUpPasswordCreationViewController: UIViewController {
             // create the user
             // Transmit to main screen
             
-//            userProvider.request(.createUser(first_name: firstName!, last_name: lastName!, email: email!, password: passwordTextField.text!)){ result in
-//                
-//                switch result {
-//                case .success(let response):
-//                    let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
-//                    print(json)
-//                    DispatchQueue.main.async {
-//                        self.signUP()
-//                    }
-//                    
-//                case .failure(let error):
-//                    print(error)
-//                    
-//                }
-//            }
-            
-            
+            userProvider.request(.createUser(first_name: firstName!, last_name: lastName!, email: email!, password: passwordTextField.text!)){ result in
+                
+                switch result {
+                case .success(let response):
+                        self.signIN()
+                case .failure(let error):
+                    print(error)
+                    
+                }
+            }
+
         }
     }
     /*
@@ -107,13 +101,13 @@ class SignUpPasswordCreationViewController: UIViewController {
         return nil
     }
 // MARK: - sign up func
-func signUP() {
+func signIN() {
     let scenes = UIApplication.shared.connectedScenes
     let windowScene = scenes.first as? UIWindowScene
     let window = windowScene?.windows.first
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let homePage = storyboard.instantiateViewController(withIdentifier: "MainTabBarViewController")
-    window?.rootViewController = homePage
+    let sign = storyboard.instantiateViewController(withIdentifier: "signIn")
+    window?.rootViewController = sign
 }
 // MARK: - show Error
 func showError(_ message: String) {
