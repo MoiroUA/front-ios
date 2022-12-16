@@ -39,7 +39,6 @@ class SignUpNameEmailViewController: UIViewController {
         }
         
     }
-    
     func validateFields() -> String? {
         
         //check that all fields are filled in

@@ -38,25 +38,6 @@ class SignUpViewController: UIViewController {
             showError(error!)
         }
         else {
-            // create the user
-            // Transmit to main screen
-            
-//            userProvider.request(.createUser(first_name: firstNameTextField.text!, last_name: lastNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)){ result in
-//                
-//                switch result {
-//                case .success(let response):
-//                    let json = try! JSONSerialization.jsonObject(with: response.data, options: [])
-//                    print(json)
-//                    DispatchQueue.main.async {
-//                        self.signUP()
-//                    }
-//                    
-//                case .failure(let error):
-//                    print(error)
-//                    
-//                }
-//            }
-            
             
         }
         

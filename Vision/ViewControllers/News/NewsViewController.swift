@@ -25,7 +25,6 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
         let urlString = "https://newsapi.org/v2/top-headlines?country=ua&apiKey=9e4a9c2cbbb44b5b836b0e568608a8cb"
         
         apiService.fetchData(urlString: urlString) { [weak self] value in
